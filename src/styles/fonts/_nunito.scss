@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/nunito/nunito-variable.woff2") format("woff2"),
+    url("../../assets/fonts/nunito/nunito-variable.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/nunito/nunito-italic-variable.woff2")
+      format("woff2"),
+    url("../../assets/fonts/nunito/nunito-italic-variable.woff") format("woff");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

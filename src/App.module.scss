@@ -1,0 +1,16 @@
+@use "@/styles/abstract/index-abstract" as abstract;
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+
+  @include abstract.breakpoint-up(lg) {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 60px 32px;
+  }
+}

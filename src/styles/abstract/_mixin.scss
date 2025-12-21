@@ -1,0 +1,143 @@
+@use "./function" as fn;
+
+/// Media query mixin
+/// @param {String} $breakpoint - breakpoint name ('sm' or 'md')
+@mixin breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 640px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint defined for `#{$breakpoint}`.";
+  }
+}
+
+/// Typography mixin
+
+// Navigation
+@mixin typography-navigation-logo-text {
+  font-size: fn.px-to-rem(18px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+@mixin typography-navigation-link-group {
+  font-size: fn.px-to-rem(13px);
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@mixin typography-navigation-link {
+  font-size: fn.px-to-rem(13px);
+  font-weight: 400;
+  line-height: 20px;
+}
+
+// Hero
+@mixin typography-hero-heading {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-hero-heading-subtitle {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-hero-body {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-hero-link {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+// News
+@mixin typography-news-heading {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-news-heading-subtitle {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-news-item-tag {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-news-item-title {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-news-item-body {
+  font-size: fn.px-to-rem(36px);
+  font-weight: 700;
+  line-height: fn.px-to-rem(40px);
+
+  @include breakpoint-up(sm) {
+    font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}

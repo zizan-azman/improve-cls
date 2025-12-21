@@ -1,0 +1,39 @@
+@use "@/styles/abstract/index-abstract" as abs;
+@use "@/styles/base/index-base" as root;
+
+.top-navigation {
+  --top-navigation-bg-color: #{root.$root-accent-bold-color};
+  --top-navigation-menu-padding: 0 #{root.$root-spacing-md};
+  --top-navigation-logo-text-color: #{root.$root-on-accent-text-color};
+
+  align-content: center;
+  background-color: var(--top-navigation-bg-color);
+
+  @include abs.breakpoint-up(lg) {
+    // background-color: yellow;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: var(--top-navigation-menu-padding);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__logo-text {
+    display: none;
+    color: var(--top-navigation-logo-text-color);
+    @include abs.typography-navigation-logo-text;
+  }
+
+  &__links-container {
+    background-color: green;
+  }
+}
