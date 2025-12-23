@@ -8,6 +8,7 @@ interface HeroImageTeaser {
   imgWidth: string | undefined;
   imgHeight: string | undefined;
   imgAlt: string | undefined;
+  imgPath: string;
   paragraphs: HeroImageTeaserParagraph[];
   links: LinkArrowConfig[];
 }

@@ -4,7 +4,6 @@ import {
   getHeroImageClass,
 } from "./HeroImage.utils";
 import styles from "./HeroImage.module.scss";
-import bee from "@/assets/images/bee.jpg";
 import { LinkArrow } from "@/components/link/link-arrow/LinkArrow";
 
 export function HeroImage({ config }: HeroImageProps) {
@@ -22,7 +21,7 @@ export function HeroImage({ config }: HeroImageProps) {
         <h1 className={styles["hero-image__heading"]}>{heading}</h1>
         <div className={styles["hero-image__teaser"]}>
           <img
-            src={bee}
+            src={teaser.imgPath}
             alt={teaser.imgAlt}
             width={teaser.imgWidth}
             height={teaser.imgHeight}
