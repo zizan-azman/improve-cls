@@ -1,3 +1,6 @@
+import { HeroImage } from "@/components/hero/hero-image/HeroImage";
+import { HERO_IMAGE_LAYOUT_SHIFT_MOCK } from "@/mock/HeroImageLayoutShift.mock";
+
 export default function ImgLayoutShiftPage() {
-  return <p>Img Layout Shift Page workds!</p>;
+  return <HeroImage config={HERO_IMAGE_LAYOUT_SHIFT_MOCK} />;
 }

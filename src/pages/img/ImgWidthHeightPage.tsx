@@ -1,3 +1,6 @@
+import { HeroImage } from "@/components/hero/hero-image/HeroImage";
+import { HERO_IMAGE_DIMENSION_MOCK } from "@/mock/HeroImageDimension.mock";
+
 export default function ImgWidthHeightPage() {
-  return <p>Add width or height page works!</p>;
+  return <HeroImage config={HERO_IMAGE_DIMENSION_MOCK} />;
 }

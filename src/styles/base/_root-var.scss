@@ -1,64 +1,65 @@
 @use "../abstract/variables" as var;
 
 :root {
-  --background-color: #{var.$background-color};
-  --background-subtle-color: #{var.$background-subtle-color};
-  --text-color: #{var.$text-color};
-  --text-subtle-color: #{var.$text-subtle-color};
-  --on-accent-text-color: #{var.$on-accent-text-color};
-  --accent-color: #{var.$accent-color};
-  --accent-minimal-color: #{var.$accent-minimal-color};
-  --accent-subtle-color: #{var.$accent-subtle-color};
-  --accent-bold-color: #{var.$accent-bold-color};
-  --stroke-color: #{var.$stroke-color};
-  --stroke-subtle-color: #{var.$stroke-subtle-color};
+  --background-color: #{var.$mapped-background-color};
+  --background-subtle-color: #{var.$mapped-background-subtle-color};
+  --text-color: #{var.$mapped-text-color};
+  --text-subtle-color: #{var.$mapped-text-subtle-color};
+  --on-accent-text-color: #{var.$mapped-on-accent-text-color};
+  --accent-color: #{var.$mapped-accent-color};
+  --accent-minimal-color: #{var.$mapped-accent-minimal-color};
+  --accent-subtle-color: #{var.$mapped-accent-subtle-color};
+  --accent-bold-color: #{var.$mapped-accent-bold-color};
+  --stroke-color: #{var.$mapped-stroke-color};
+  --stroke-subtle-color: #{var.$mapped-stroke-subtle-color};
   --border-radius-scale: 1;
   --border-radius-xs: calc(
-    #{var.$border-radius-xs} * var(--border-radius-scale)
+    #{var.$mapped-border-radius-xs} * var(--border-radius-scale)
   );
   --border-radius-sm: calc(
-    #{var.$border-radius-sm} * var(--border-radius-scale)
+    #{var.$mapped-border-radius-sm} * var(--border-radius-scale)
   );
   --border-radius-md: calc(
-    #{var.$border-radius-md} * var(--border-radius-scale)
+    #{var.$mapped-border-radius-md} * var(--border-radius-scale)
   );
   --border-radius-full: calc(
-    #{var.$border-radius-full} * var(--border-radius-scale)
+    #{var.$mapped-border-radius-full} * var(--border-radius-scale)
   );
   --spacing-scale: 1;
-  --spacing-4xs: calc(#{var.$spacing-4xs} * var(--spacing-scale));
-  --spacing-3xs: calc(#{var.$spacing-3xs} * var(--spacing-scale));
-  --spacing-2xs: calc(#{var.$spacing-2xs} * var(--spacing-scale));
-  --spacing-xs: calc(#{var.$spacing-xs} * var(--spacing-scale));
-  --spacing-sm: calc(#{var.$spacing-sm} * var(--spacing-scale));
-  --spacing-md: calc(#{var.$spacing-md} * var(--spacing-scale));
-  --spacing-lg: calc(#{var.$spacing-lg} * var(--spacing-scale));
-  --spacing-xl: calc(#{var.$spacing-xl} * var(--spacing-scale));
+  --spacing-4xs: calc(#{var.$mapped-spacing-4xs} * var(--spacing-scale));
+  --spacing-3xs: calc(#{var.$mapped-spacing-3xs} * var(--spacing-scale));
+  --spacing-2xs: calc(#{var.$mapped-spacing-2xs} * var(--spacing-scale));
+  --spacing-xs: calc(#{var.$mapped-spacing-xs} * var(--spacing-scale));
+  --spacing-sm: calc(#{var.$mapped-spacing-sm} * var(--spacing-scale));
+  --spacing-md: calc(#{var.$mapped-spacing-md} * var(--spacing-scale));
+  --spacing-lg: calc(#{var.$mapped-spacing-lg} * var(--spacing-scale));
+  --spacing-xl: calc(#{var.$mapped-spacing-xl} * var(--spacing-scale));
   --font-family: "Nunito";
 }
 
-$root-background-color: var(--background-color);
-$root-background-subtle-color: var(--background-subtle-color);
-$root-text-color: var(--text-color);
-$root-text-subtle-color: var(--text-subtle-color);
-$root-on-accent-text-color: var(--on-accent-text-color);
-$root-accent-color: var(--accent-color);
-$root-accent-minimal-color: var(--accent-minimal-color);
-$root-accent-subtle-color: var(--accent-subtle-color);
-$root-accent-bold-color: var(--accent-bold-color);
-$root-stroke-color: var(--stroke-color);
-$root-stroke-subtle-color: var(--stroke-subtle-color);
-$root-border-radius-scale: var(--border-radius-scale);
-$root-border-radius-xs: var(--border-radius-xs);
-$root-border-radius-sm: var(--border-radius-sm);
-$root-border-radius-md: var(--border-radius-md);
-$root-border-radius-full: var(--border-radius-full);
-$root-spacing-scale: var(--spacing-scale);
-$root-spacing-3xs: var(--spacing-3xs);
-$root-spacing-2xs: var(--spacing-2xs);
-$root-spacing-xs: var(--spacing-xs);
-$root-spacing-sm: var(--spacing-sm);
-$root-spacing-md: var(--spacing-md);
-$root-spacing-lg: var(--spacing-lg);
-$root-spacing-xl: var(--spacing-xl);
-$root-font-family: var(--font-family);
+$background-color: var(--background-color);
+$background-subtle-color: var(--background-subtle-color);
+$text-color: var(--text-color);
+$text-subtle-color: var(--text-subtle-color);
+$on-accent-text-color: var(--on-accent-text-color);
+$accent-color: var(--accent-color);
+$accent-minimal-color: var(--accent-minimal-color);
+$accent-subtle-color: var(--accent-subtle-color);
+$accent-bold-color: var(--accent-bold-color);
+$stroke-color: var(--stroke-color);
+$stroke-subtle-color: var(--stroke-subtle-color);
+$border-radius-scale: var(--border-radius-scale);
+$border-radius-xs: var(--border-radius-xs);
+$border-radius-sm: var(--border-radius-sm);
+$border-radius-md: var(--border-radius-md);
+$border-radius-full: var(--border-radius-full);
+$spacing-scale: var(--spacing-scale);
+$spacing-4xs: var(--spacing-4xs);
+$spacing-3xs: var(--spacing-3xs);
+$spacing-2xs: var(--spacing-2xs);
+$spacing-xs: var(--spacing-xs);
+$spacing-sm: var(--spacing-sm);
+$spacing-md: var(--spacing-md);
+$spacing-lg: var(--spacing-lg);
+$spacing-xl: var(--spacing-xl);
+$font-family: var(--font-family);

@@ -1,7 +1,6 @@
 @use "./function" as fn;
 
-/// Media query mixin
-/// @param {String} $breakpoint - breakpoint name ('sm' or 'md')
+/* Media Query */
 @mixin breakpoint-up($breakpoint) {
   @if $breakpoint == sm {
     @media (min-width: 640px) {
@@ -20,7 +19,18 @@
   }
 }
 
-/// Typography mixin
+/* Typography */
+
+// Link Arrow
+@mixin typography-link-arrow {
+  font-size: fn.px-to-rem(16px);
+  font-weight: 700;
+  line-height: 1.25;
+
+  @include breakpoint-up(lg) {
+    font-size: fn.px-to-rem(18px);
+  }
+}
 
 // Navigation
 @mixin typography-navigation-logo-text {
@@ -43,46 +53,28 @@
 
 // Hero
 @mixin typography-hero-heading {
-  font-size: fn.px-to-rem(36px);
+  font-size: fn.px-to-rem(24px);
   font-weight: 700;
   line-height: fn.px-to-rem(40px);
 
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
+  @include breakpoint-up(lg) {
+    font-size: fn.px-to-rem(32px);
   }
 }
 
-@mixin typography-hero-heading-subtitle {
-  font-size: fn.px-to-rem(36px);
-  font-weight: 700;
-  line-height: fn.px-to-rem(40px);
-
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
-  }
+@mixin typography-hero-teaser-paragraph {
+  font-size: fn.px-to-rem(16px);
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-@mixin typography-hero-body {
-  font-size: fn.px-to-rem(36px);
-  font-weight: 700;
-  line-height: fn.px-to-rem(40px);
+@mixin typography-hero-description {
+  font-size: fn.px-to-rem(18px);
+  font-weight: 600;
+  line-height: 1.75;
 
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
-  }
-}
-
-@mixin typography-hero-link {
-  font-size: fn.px-to-rem(36px);
-  font-weight: 700;
-  line-height: fn.px-to-rem(40px);
-
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
+  @include breakpoint-up(lg) {
+    font-size: fn.px-to-rem(20px);
   }
 }
 

@@ -20,12 +20,14 @@ interface SideNavigationGroupButton {
 }
 
 interface SideNavigationLink {
+  uniqueID: string;
   path: string;
   text: string;
 }
 
 interface SideNavigationGroup {
   id: string;
+  uniqueID: string;
   button: SideNavigationGroupButton;
   links: SideNavigationLink[];
 }

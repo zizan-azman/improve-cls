@@ -117,7 +117,10 @@ export function SideNavigation({ config }: SideNavigationProps) {
         {/* Links */}
         <ul className={styles["side-navigation__groups-container"]} role="list">
           {groups.map((group) => (
-            <li className={styles["side-navigation__group-item"]}>
+            <li
+              key={group.uniqueID}
+              className={styles["side-navigation__group-item"]}
+            >
               <button
                 onClick={() => toggleGroup(group.id)}
                 aria-expanded={isGroupExpanded(group.id)}
@@ -158,6 +161,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
               >
                 {group.links.map((link) => (
                   <NavLink
+                    key={link.uniqueID}
                     to={link.path}
                     end
                     className={({ isActive }) =>
@@ -172,258 +176,9 @@ export function SideNavigation({ config }: SideNavigationProps) {
                     {link.text}
                   </NavLink>
                 ))}
-                {/* <NavLink
-                  to="/container/layout-shift"
-                  end
-                  className={({ isActive }) =>
-                    getNavLinkClass(
-                      isActive,
-                      styles["side-navigation__link"],
-                      styles["side-navigation__link--active"]
-                    )
-                  }
-                  onClick={handleNavClick}
-                >
-                  Layout shift example
-                </NavLink>
-                <NavLink
-                  to="/container/add-width-height"
-                  end
-                  className={({ isActive }) =>
-                    getNavLinkClass(
-                      isActive,
-                      styles["side-navigation__link"],
-                      styles["side-navigation__link--active"]
-                    )
-                  }
-                  onClick={handleNavClick}
-                >
-                  Add width or height
-                </NavLink> */}
               </div>
             </li>
           ))}
-          {/* <li className={styles["side-navigation__group-item"]}>
-            <button
-              onClick={() => toggleGroup("container")}
-              aria-expanded={isGroupExpanded("container")}
-              className={getGroupLinkClass(
-                isGroupExpanded("container"),
-                styles["side-navigation__group-button"],
-                styles["side-navigation__group-button--expand"]
-              )}
-            >
-              <div className={styles["side-navigation__group-logo-text"]}>
-                <svg
-                  className={styles["side-navigation__group-prefix-icon"]}
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                >
-                  <use href="#imagesmode"></use>
-                </svg>
-                <span className={styles["side-navigation__group-text"]}>
-                  Media Containers
-                </span>
-              </div>
-              <svg
-                className={styles["side-navigation__group-arrow"]}
-                width="20"
-                height="20"
-                aria-hidden="true"
-              >
-                <use href="#keyboard-right"></use>
-              </svg>
-            </button>
-            <div
-              className={getGroupLinkClass(
-                isGroupExpanded("container"),
-                styles["side-navigation__links-container"],
-                styles["side-navigation__links-container--expand"]
-              )}
-            >
-              <NavLink
-                to="/container/layout-shift"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Layout shift example
-              </NavLink>
-              <NavLink
-                to="/container/add-width-height"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Add width or height
-              </NavLink>
-            </div>
-          </li>
-          <li className={styles["side-navigation__group-item"]}>
-            <button
-              onClick={() => toggleGroup("image")}
-              aria-expanded={isGroupExpanded("image")}
-              className={getGroupLinkClass(
-                isGroupExpanded("image"),
-                styles["side-navigation__group-button"],
-                styles["side-navigation__group-button--expand"]
-              )}
-            >
-              <div className={styles["side-navigation__group-logo-text"]}>
-                <svg
-                  className={styles["side-navigation__group-prefix-icon"]}
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                >
-                  <use href="#imagesmode"></use>
-                </svg>
-                <span className={styles["side-navigation__group-text"]}>
-                  Image Element
-                </span>
-              </div>
-              <svg
-                className={styles["side-navigation__group-arrow"]}
-                width="20"
-                height="20"
-                aria-hidden="true"
-              >
-                <use href="#keyboard-right"></use>
-              </svg>
-            </button>
-            <div
-              className={getGroupLinkClass(
-                isGroupExpanded("image"),
-                styles["side-navigation__links-container"],
-                styles["side-navigation__links-container--expand"]
-              )}
-            >
-              <NavLink
-                to="/img/layout-shift"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Layout shift example
-              </NavLink>
-              <NavLink
-                to="/img/add-width-height"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Add width or height
-              </NavLink>
-              <NavLink
-                to="/img/add-aspect-ratio"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Add Aspect Ratio
-              </NavLink>
-            </div>
-          </li>
-          <li className={styles["side-navigation__group-item"]}>
-            <button
-              onClick={() => toggleGroup("video")}
-              aria-expanded={isGroupExpanded("video")}
-              className={getGroupLinkClass(
-                isGroupExpanded("video"),
-                styles["side-navigation__group-button"],
-                styles["side-navigation__group-button--expand"]
-              )}
-            >
-              <div className={styles["side-navigation__group-logo-text"]}>
-                <svg
-                  className={styles["side-navigation__group-prefix-icon"]}
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                >
-                  <use href="#imagesmode"></use>
-                </svg>
-                <span className={styles["side-navigation__group-text"]}>
-                  Video Element
-                </span>
-              </div>
-              <svg
-                className={styles["side-navigation__group-arrow"]}
-                width="20"
-                height="20"
-                aria-hidden="true"
-              >
-                <use href="#keyboard-right"></use>
-              </svg>
-            </button>
-            <div
-              className={getGroupLinkClass(
-                isGroupExpanded("video"),
-                styles["side-navigation__links-container"],
-                styles["side-navigation__links-container--expand"]
-              )}
-            >
-              <NavLink
-                to="/video/layout-shift"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Layout shift example
-              </NavLink>
-              <NavLink
-                to="/video/add-width-height"
-                end
-                className={({ isActive }) =>
-                  getNavLinkClass(
-                    isActive,
-                    styles["side-navigation__link"],
-                    styles["side-navigation__link--active"]
-                  )
-                }
-                onClick={handleNavClick}
-              >
-                Add width or height
-              </NavLink>
-            </div>
-          </li> */}
         </ul>
       </aside>
     </nav>

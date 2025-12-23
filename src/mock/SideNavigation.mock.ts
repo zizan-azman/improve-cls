@@ -12,6 +12,7 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
   groups: [
     {
       id: "container",
+      uniqueID: "1",
       button: {
         iconID: "#picture-in-picture",
         iconWidth: "24",
@@ -19,12 +20,21 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         text: "Media Containers",
       },
       links: [
-        { path: "/container/layout-shift", text: "Layout shift example" },
-        { path: "/container/width-height", text: "Add width or height" },
+        {
+          path: "/container/layout-shift",
+          text: "Layout shift example",
+          uniqueID: "1",
+        },
+        {
+          path: "/container/width-height",
+          text: "Add width or height",
+          uniqueID: "2",
+        },
       ],
     },
     {
       id: "img",
+      uniqueID: "2",
       button: {
         iconID: "#imagesmode",
         iconWidth: "24",
@@ -32,13 +42,22 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         text: "Image element",
       },
       links: [
-        { path: "/img/layout-shift", text: "Layout shift example" },
-        { path: "/img/width-height", text: "Add width or height" },
-        { path: "/img/aspect-ratio", text: "Img aspect ratio" },
+        {
+          path: "/img/layout-shift",
+          text: "Layout shift example",
+          uniqueID: "1",
+        },
+        {
+          path: "/img/width-height",
+          text: "Add width or height",
+          uniqueID: "2",
+        },
+        { path: "/img/aspect-ratio", text: "Img aspect ratio", uniqueID: "3" },
       ],
     },
     {
       id: "video",
+      uniqueID: "3",
       button: {
         iconID: "#slideshow",
         iconWidth: "24",
@@ -46,13 +65,26 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         text: "Video element",
       },
       links: [
-        { path: "/video/layout-shift", text: "Layout shift example" },
-        { path: "/video/width-height", text: "Video width or height" },
-        { path: "/video/aspect-ratio", text: "Video aspect ratio" },
+        {
+          path: "/video/layout-shift",
+          text: "Layout shift example",
+          uniqueID: "1",
+        },
+        {
+          path: "/video/width-height",
+          text: "Video width or height",
+          uniqueID: "2",
+        },
+        {
+          path: "/video/aspect-ratio",
+          text: "Video aspect ratio",
+          uniqueID: "3",
+        },
       ],
     },
     {
       id: "async",
+      uniqueID: "4",
       button: {
         iconID: "#event-list",
         iconWidth: "24",
@@ -60,9 +92,21 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         text: "Async Content",
       },
       links: [
-        { path: "/async/layout-shift", text: "Layout shift example" },
-        { path: "/async/loading-placeholder", text: "Loading Placeholder" },
-        { path: "/async/min-width-height", text: "Add min width or height" },
+        {
+          path: "/async/layout-shift",
+          text: "Layout shift example",
+          uniqueID: "1",
+        },
+        {
+          path: "/async/loading-placeholder",
+          text: "Loading Placeholder",
+          uniqueID: "2",
+        },
+        {
+          path: "/async/min-width-height",
+          text: "Add min width or height",
+          uniqueID: "3",
+        },
       ],
     },
   ],

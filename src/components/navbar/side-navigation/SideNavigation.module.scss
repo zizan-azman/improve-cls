@@ -2,10 +2,10 @@
 @use "@/styles/base/index-base" as root;
 
 .side-navigation {
-  --side-navigation-bg-color: #{root.$root-accent-bold-color};
-  --side-navigation-mobile-bg-color: #{root.$root-background-color};
-  --side-navigation-padding: 0 #{root.$root-spacing-md};
-  --side-navigation-logo-text-color: #{root.$root-on-accent-text-color};
+  --side-navigation-bg-color: #{root.$accent-bold-color};
+  --side-navigation-mobile-bg-color: #{root.$background-color};
+  --side-navigation-padding: 0 #{root.$spacing-md};
+  --side-navigation-logo-text-color: #{root.$on-accent-text-color};
 
   display: flex;
   //   align-items: center;

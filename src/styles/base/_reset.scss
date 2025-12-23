@@ -43,9 +43,9 @@ ol[role="list"] {
 body {
   min-height: 100vh;
   line-height: 1.625;
-  font-family: root.$root-font-family, ui-sans-serif, system-ui, sans-serif;
-  background-color: root.$root-background-color;
-  color: root.$root-text-color;
+  font-family: root.$font-family, ui-sans-serif, system-ui, sans-serif;
+  background-color: root.$background-color;
+  color: root.$text-color;
 }
 
 body:has(.ma-icon-hamburger input:checked) {
@@ -118,12 +118,12 @@ textarea:not([rows]) {
 }
 
 ::-webkit-scrollbar-track {
-  background: root.$root-background-color;
+  background: root.$background-color;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: root.$root-background-subtle-color;
-  border-radius: root.$root-border-radius-sm;
+  background: root.$background-subtle-color;
+  border-radius: root.$border-radius-sm;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

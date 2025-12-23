@@ -2,9 +2,9 @@
 @use "@/styles/base/index-base" as root;
 
 .top-navigation {
-  --top-navigation-bg-color: #{root.$root-accent-bold-color};
-  --top-navigation-menu-padding: 0 #{root.$root-spacing-md};
-  --top-navigation-logo-text-color: #{root.$root-on-accent-text-color};
+  --top-navigation-bg-color: #{root.$accent-bold-color};
+  --top-navigation-menu-padding: 0 #{root.$spacing-md};
+  --top-navigation-logo-text-color: #{root.$on-accent-text-color};
 
   align-content: center;
   background-color: var(--top-navigation-bg-color);
