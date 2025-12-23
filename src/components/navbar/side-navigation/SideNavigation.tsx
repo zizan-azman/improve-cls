@@ -51,15 +51,6 @@ export function SideNavigation({ config }: SideNavigationProps) {
 
   const isGroupExpanded = (groupId: string) => expandedGroup === groupId;
 
-  /* ===========================
-     Close drawer + collapse
-     (used on mobile link click)
-     =========================== */
-  const handleNavClick = () => {
-    closeNav();
-    // setExpandedGroup(null);
-  };
-
   return (
     <nav className={styles["side-navigation"]} aria-label="Primary navigation">
       <button
@@ -84,7 +75,6 @@ export function SideNavigation({ config }: SideNavigationProps) {
         onClick={closeNav}
         aria-hidden="true"
       />
-      {/* Drawer */}
       <aside
         className={getDrawerClass(
           isOpen,
@@ -93,7 +83,6 @@ export function SideNavigation({ config }: SideNavigationProps) {
         )}
         aria-hidden={!isOpen}
       >
-        {/* Logo */}
         <NavLink
           to={logo.path}
           className={styles["side-navigation__logo"]}
@@ -113,8 +102,6 @@ export function SideNavigation({ config }: SideNavigationProps) {
             {logo.text}
           </span>
         </NavLink>
-
-        {/* Links */}
         <ul className={styles["side-navigation__groups-container"]} role="list">
           {groups.map((group) => (
             <li
@@ -171,7 +158,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
                         styles["side-navigation__link--active"]
                       )
                     }
-                    onClick={handleNavClick}
+                    onClick={closeNav}
                   >
                     {link.text}
                   </NavLink>

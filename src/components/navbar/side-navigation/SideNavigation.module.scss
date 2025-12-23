@@ -8,13 +8,12 @@
   --side-navigation-logo-text-color: #{root.$on-accent-text-color};
 
   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
   height: 60px;
   padding: var(--side-navigation-padding);
   background-color: var(--side-navigation-mobile-bg-color);
   border-bottom: 1px solid var(--stroke-subtle-color);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 
   @include abs.breakpoint-up(lg) {
@@ -22,6 +21,7 @@
     border-bottom: none;
     background-color: var(--side-navigation-bg-color);
     padding: 0;
+    position: relative;
   }
 
   &__hamburger-button {
