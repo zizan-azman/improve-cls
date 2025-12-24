@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import type { NewsModernItem, NewsModernProps } from "./NewsModern.model";
 import styles from "./NewsModern.module.scss";
+import { getNewsModernClass } from "./NewsModern.utils";
 
 export function NewsModern({ config }: NewsModernProps) {
-  const { placeholder, delay, news, emptyData } = config;
+  const { type, placeholder, delay, news, emptyData } = config;
 
   // Always start empty to simulate async load
   const [newsItems, setNewsItems] = useState<NewsModernItem[]>([]);
@@ -21,7 +22,14 @@ export function NewsModern({ config }: NewsModernProps) {
   }, [delay, news]); // run once on mount
 
   return (
-    <div className={styles["news-modern"]}>
+    <div
+      className={getNewsModernClass(
+        type,
+        styles["news-modern"],
+        styles["news-modern--loading-placeholder"],
+        styles["news-modern--container-dimension"]
+      )}
+    >
       {isLoading && placeholder.showPlaceholder && (
         <div className={styles["news-modern__loading-placeholder"]}>
           {placeholder.placeholderText}

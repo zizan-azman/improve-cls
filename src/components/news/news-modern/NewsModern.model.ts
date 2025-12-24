@@ -12,8 +12,9 @@ export interface NewsModernItem {
 }
 
 export interface NewsModernConfig {
+  type: "layout-shift" | "loading-placeholder" | "container-dimension";
   placeholder: NewsModernPlaceholder;
-  delay?: number;
+  delay: number;
   news: NewsModernItem[];
   emptyData: string;
 }

@@ -6,13 +6,19 @@
   border: 1px solid grey;
   border-radius: 8px;
 
-  &__loading-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    padding: 32px;
-    background-color: var(--text-subtle-color);
+  &--loading-placeholder {
+    .news-modern__loading-placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      padding: 32px;
+      background-color: var(--text-subtle-color);
+    }
+  }
+
+  &--container-dimension:not(:has(.news-modern__news-item)) {
+    height: 600px;
   }
 
   &__news-item {
