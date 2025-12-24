@@ -1,0 +1,70 @@
+@use "@/styles/abstract/index-abstract" as abs;
+@use "@/styles/base/index-base" as root;
+
+.news-modern {
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 8px;
+
+  &__loading-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 32px;
+    background-color: var(--text-subtle-color);
+  }
+
+  &__news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid grey;
+    padding: 16px;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    @include abs.breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__date {
+    border-radius: 8px;
+    background-color: var(--accent-subtle-color);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__date-day {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-4xs);
+  }
+
+  &__date-month {
+    color: var(--accent-color);
+  }
+
+  &__item-content {
+    background-color: transparent;
+  }
+
+  &__item-category {
+    margin-bottom: var(--spacing-4xs);
+  }
+
+  &__item-paragraph {
+    font-weight: 300;
+  }
+
+  &__empty-data {
+    padding: 16px 24px;
+    background-color: var(--background-subtle-color);
+  }
+}
