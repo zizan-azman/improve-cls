@@ -27,7 +27,7 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         },
         {
           path: "/container/width-height",
-          text: "Add width or height",
+          text: "Width Height solution",
           uniqueID: "2",
         },
       ],
@@ -49,10 +49,14 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         },
         {
           path: "/img/width-height",
-          text: "Add width or height",
+          text: "Width Height solution",
           uniqueID: "2",
         },
-        { path: "/img/aspect-ratio", text: "Img aspect ratio", uniqueID: "3" },
+        {
+          path: "/img/aspect-ratio",
+          text: "Aspect ratio solution",
+          uniqueID: "3",
+        },
       ],
     },
     {
@@ -72,12 +76,12 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         },
         {
           path: "/video/width-height",
-          text: "Video width or height",
+          text: "Width Height solution",
           uniqueID: "2",
         },
         {
           path: "/video/aspect-ratio",
-          text: "Video aspect ratio",
+          text: "Aspect ratio solution",
           uniqueID: "3",
         },
       ],

@@ -29,12 +29,12 @@ export const HERO_VIDEO_LAYOUT_SHIFT_MOCK: HeroVideoConfig = {
       {
         uniqueID: "1",
         path: "/video/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
         uniqueID: "2",
         path: "/video/aspect-ratio",
-        text: "Fix layout shift using aspect-ratio",
+        text: "Aspect ratio solution",
       },
     ],
   },
@@ -85,12 +85,12 @@ export const HERO_VIDEO_LAYOUT_SHIFT_MOCK: HeroVideoConfig = {
       {
         uniqueID: "1",
         path: "/video/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
         uniqueID: "2",
         path: "/video/aspect-ratio",
-        text: "Fix layout shift using aspect-ratio",
+        text: "Aspect ratio solution",
       },
     ],
   },

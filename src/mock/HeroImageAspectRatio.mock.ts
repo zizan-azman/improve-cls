@@ -29,14 +29,14 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
     ],
     links: [
       {
-        uniqueID: "2",
+        uniqueID: "1",
         path: "/img/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
-        uniqueID: "1",
+        uniqueID: "2",
         path: "/img/layout-shift",
-        text: "View the original layout shift example",
+        text: "Layout shift example",
       },
     ],
   },
@@ -52,7 +52,7 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
         text: "To reduce layout shifts, the img element is styled with width: 400px, height: 100%, aspect-ratio: 16/9 and flex-shrink: 0—where 400px can be replaced with any custom width. Setting flex-shrink: 0 prevents the image from shrinking its width as a side effect of being inside a flex container (row direction). The aspect-ratio property allows the browser to calculate the image's height in advance, ensuring the correct space is reserved before the image loads.",
       },
       {
-        uniqueID: "0a",
+        uniqueID: "1",
         showImage: true,
         controlImgHeight: false,
         imgAlt:
@@ -61,7 +61,7 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
         text: "It's important to note that the aspect-ratio property must match your image's original aspect ratio. In this example, the image's original dimensions are width 1280px and height 720px. Therefore, aspect-ratio: 16/9 is the correct ratio to be used.",
       },
       {
-        uniqueID: "1",
+        uniqueID: "2",
         showImage: true,
         controlImgHeight: false,
         imgAlt:
@@ -70,7 +70,7 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
         text: "If the image's original aspect ratio is unknown, or if you intentionally use an aspect-ratio that is different from your image's ratio, you can apply object-fit: cover. This ensures the image fills the reserved space defined by the chosen aspect-ratio. Without object-fit, the image may appear stretched or squashed due to incorrect scaling.",
       },
       {
-        uniqueID: "2",
+        uniqueID: "3",
         showImage: false,
         controlImgHeight: true,
         imgAlt: "Screenshot of img element with no size dimension",
@@ -92,19 +92,19 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
         controlImgHeight: false,
         imgAlt: undefined,
         imgPath: undefined,
-        text: "To explore other CLS scenarios and solutions, check out the links below.",
+        text: "To view other layout shift examples, check out the links below.",
       },
     ],
     links: [
       {
-        uniqueID: "2",
+        uniqueID: "1",
         path: "/img/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
-        uniqueID: "1",
+        uniqueID: "2",
         path: "/img/layout-shift",
-        text: "View the original layout shift example",
+        text: "Layout shift example",
       },
     ],
   },

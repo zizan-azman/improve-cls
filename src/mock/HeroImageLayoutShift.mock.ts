@@ -22,19 +22,19 @@ export const HERO_IMAGE_LAYOUT_SHIFT_MOCK: HeroImageConfig = {
       },
       {
         uniqueID: "3",
-        text: "To learn how to reduce this layout shift, check out the links below.",
+        text: "To learn how to fix this layout shift and improve the CLS score, check out the links below.",
       },
     ],
     links: [
       {
         uniqueID: "1",
         path: "/img/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
         uniqueID: "2",
         path: "/img/aspect-ratio",
-        text: "Fix layout shift using aspect-ratio",
+        text: "Aspect ratio solution",
       },
     ],
   },
@@ -85,12 +85,12 @@ export const HERO_IMAGE_LAYOUT_SHIFT_MOCK: HeroImageConfig = {
       {
         uniqueID: "1",
         path: "/img/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
         uniqueID: "2",
         path: "/img/aspect-ratio",
-        text: "Fix layout shift using aspect-ratio",
+        text: "Aspect ratio solution",
       },
     ],
   },

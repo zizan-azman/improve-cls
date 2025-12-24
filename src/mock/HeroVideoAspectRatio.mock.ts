@@ -30,14 +30,14 @@ export const HERO_VIDEO_ASPECT_RATIO_MOCK: HeroVideoConfig = {
     ],
     links: [
       {
-        uniqueID: "2",
+        uniqueID: "1",
         path: "/video/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
-        uniqueID: "1",
+        uniqueID: "2",
         path: "/video/layout-shift",
-        text: "View the original layout shift example",
+        text: "Layout shift example",
       },
     ],
   },
@@ -53,7 +53,7 @@ export const HERO_VIDEO_ASPECT_RATIO_MOCK: HeroVideoConfig = {
         text: "To reduce layout shifts, the img element is styled with width: 500px, height: auto, aspect-ratio: 16/9 and flex-shrink: 0—where 500px can be replaced with any custom width. Setting flex-shrink: 0 prevents the image from shrinking its width as a side effect of being inside a flex container (row direction). The aspect-ratio property allows the browser to calculate the video's height in advance, ensuring the correct space is reserved before the image loads.",
       },
       {
-        uniqueID: "0a",
+        uniqueID: "1",
         showImage: false,
         controlImgHeight: false,
         imgAlt:
@@ -62,7 +62,7 @@ export const HERO_VIDEO_ASPECT_RATIO_MOCK: HeroVideoConfig = {
         text: "It's important to note that the aspect-ratio property must match your image's original aspect ratio. In this example, the image's original dimensions are width 1280px and height 720px. Therefore, aspect-ratio: 16/9 is the correct ratio to be used.",
       },
       {
-        uniqueID: "1",
+        uniqueID: "2",
         showImage: true,
         controlImgHeight: false,
         imgAlt:
@@ -71,7 +71,7 @@ export const HERO_VIDEO_ASPECT_RATIO_MOCK: HeroVideoConfig = {
         text: "If the image's original aspect ratio is unknown, or if you intentionally use an aspect-ratio that is different from your image's ratio, you can apply object-fit: cover. Keep in mind that object-fit: cover will crop parts of your image to fit the aspect-ratio you used, which may result in some content being clipped. The screenshot below shows the result of using CSS object-fit cover and aspect-ratio 1/1 (square) on a 720p video. The 720p gets cropped into the square aspect-ratio.",
       },
       {
-        uniqueID: "1",
+        uniqueID: "3",
         showImage: true,
         controlImgHeight: false,
         imgAlt:
@@ -94,19 +94,19 @@ export const HERO_VIDEO_ASPECT_RATIO_MOCK: HeroVideoConfig = {
         controlImgHeight: false,
         imgAlt: undefined,
         imgPath: undefined,
-        text: "To explore other CLS scenarios and solutions, check out the links below.",
+        text: "To view other layout shift examples, check out the links below.",
       },
     ],
     links: [
       {
-        uniqueID: "2",
+        uniqueID: "1",
         path: "/video/width-height",
-        text: "Fix layout shift using size dimension",
+        text: "Width and Height solution",
       },
       {
-        uniqueID: "1",
+        uniqueID: "2",
         path: "/video/layout-shift",
-        text: "View the original layout shift example",
+        text: "Layout shift example",
       },
     ],
   },

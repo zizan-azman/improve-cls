@@ -21,14 +21,14 @@ export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
       },
       {
         uniqueID: "3",
-        text: "To learn how to reduce layout shifts, check out the links below.",
+        text: "To learn how to fix this layout shift and improve the CLS score, check out the link below.",
       },
     ],
     links: [
       {
         uniqueID: "1",
         path: "/container/width-height",
-        text: "Fix layout shift using min width or height",
+        text: "Width and Height solution",
       },
     ],
   },
@@ -83,14 +83,14 @@ export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
         showImage: false,
         imgAlt: "",
         imgPath: undefined,
-        text: "To learn how to fix this issue, check out the link(s) below.",
+        text: "To learn how to fix this layout shift and improve the CLS score, check out the link below.",
       },
     ],
     links: [
       {
         uniqueID: "1",
         path: "/container/width-height",
-        text: "Fix layout shift using min width or height",
+        text: "Width and Height solution",
       },
     ],
   },

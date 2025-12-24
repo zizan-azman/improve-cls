@@ -30,12 +30,12 @@ export const HERO_VIDEO_DIMENSION_MOCK: HeroVideoConfig = {
       {
         uniqueID: "1",
         path: "/video/aspect-ratio",
-        text: "Fix layout shift using aspect-ratio",
+        text: "Aspect ratio solution",
       },
       {
         uniqueID: "2",
         path: "/video/layout-shift",
-        text: "View the original layout shift example",
+        text: "Layout shift example",
       },
     ],
   },
@@ -66,24 +66,24 @@ export const HERO_VIDEO_DIMENSION_MOCK: HeroVideoConfig = {
         text: "After defining explicit dimensions on the video, we now see a huge improvement in the CLS score.",
       },
       {
-        uniqueID: "4",
+        uniqueID: "3",
         showImage: false,
         controlImgHeight: false,
         imgAlt: undefined,
         imgPath: undefined,
-        text: "To view other examples, check out the links below.",
+        text: "To view other layout shift examples, check out the links below.",
       },
     ],
     links: [
       {
         uniqueID: "1",
         path: "/video/aspect-ratio",
-        text: "Fix layout shift using aspect-ratio",
+        text: "Aspect ratio solution",
       },
       {
         uniqueID: "2",
         path: "/video/layout-shift",
-        text: "View the original layout shift example",
+        text: "Layout shift example",
       },
     ],
   },
