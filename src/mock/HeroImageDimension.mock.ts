@@ -30,13 +30,13 @@ export const HERO_IMAGE_DIMENSION_MOCK: HeroImageConfig = {
     links: [
       {
         uniqueID: "1",
-        path: "/img/layout-shift",
-        text: "View the original layout shift example",
+        path: "/img/aspect-ratio",
+        text: "Fix layout shift with aspect-ratio",
       },
       {
         uniqueID: "2",
-        path: "/img/aspect-ratio",
-        text: "Fix layout shift with aspect-ratio",
+        path: "/img/layout-shift",
+        text: "View the original layout shift example",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const HERO_IMAGE_DIMENSION_MOCK: HeroImageConfig = {
         imgAlt:
           "Screenshot of img element using its original width and height as the attribute value",
         imgPath: heroImageFix1,
-        text: "To reduce layout shifts, the img element is given explicit width and height attributes that match the image’s original dimensions. This allows the browser to calculate the correct aspect ratio and reserve the required space before the image loads, helping to maintain a stable layout.",
+        text: "To reduce layout shifts, the img element is given explicit width and height attributes that match the image's original dimensions. This allows the browser to calculate the correct aspect ratio and reserve the required space before the image loads, helping to maintain a stable layout.",
       },
       {
         uniqueID: "1",
@@ -95,13 +95,13 @@ export const HERO_IMAGE_DIMENSION_MOCK: HeroImageConfig = {
     links: [
       {
         uniqueID: "1",
-        path: "/img/layout-shift",
-        text: "View the original layout shift example",
+        path: "/img/aspect-ratio",
+        text: "Fix layout shift with aspect-ratio",
       },
       {
         uniqueID: "2",
-        path: "/img/aspect-ratio",
-        text: "Fix layout shift with aspect-ratio",
+        path: "/img/layout-shift",
+        text: "View the original layout shift example",
       },
     ],
   },

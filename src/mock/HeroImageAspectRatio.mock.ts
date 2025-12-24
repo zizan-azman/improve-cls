@@ -29,14 +29,14 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
     ],
     links: [
       {
-        uniqueID: "1",
-        path: "/img/layout-shift",
-        text: "View the original layout shift example",
-      },
-      {
         uniqueID: "2",
         path: "/img/width-height",
         text: "Fix layout shift using size dimension",
+      },
+      {
+        uniqueID: "1",
+        path: "/img/layout-shift",
+        text: "View the original layout shift example",
       },
     ],
   },
@@ -97,14 +97,14 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
     ],
     links: [
       {
-        uniqueID: "1",
-        path: "/img/layout-shift",
-        text: "View the original layout shift example",
-      },
-      {
         uniqueID: "2",
         path: "/img/width-height",
         text: "Fix layout shift using size dimension",
+      },
+      {
+        uniqueID: "1",
+        path: "/img/layout-shift",
+        text: "View the original layout shift example",
       },
     ],
   },
