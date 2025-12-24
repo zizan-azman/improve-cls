@@ -55,7 +55,7 @@ export const HERO_VIDEO_DIMENSION_MOCK: HeroVideoConfig = {
         controlImgHeight: false,
         imgAlt: "Screenshot of video element with width and height CSS",
         imgPath: heroVideoDimension2,
-        text: "In addition, the image is styled with width: 400px, height: 100%, and flex-shrink: 0—where 400px can be replaced with any custom width. Setting flex-shrink: 0 prevents the image from shrinking its width as a side effect of being inside a flex container (row direction). When combined with the width and height attributes, these styles ensure the image scales correctly within its parent container and avoids layout shifts.",
+        text: "In addition, the video is styled with width: 500px, height: auto, and flex-shrink: 0—where 400px can be replaced with any custom width. Setting flex-shrink: 0 prevents the video from shrinking its width as a side effect of being inside a flex container (row direction). When combined with the width and height attributes, these styles ensure the video scales correctly within its parent container and avoids layout shifts.",
       },
       {
         uniqueID: "2",
