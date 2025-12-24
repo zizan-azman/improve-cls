@@ -3,7 +3,7 @@ import type { NewsModernConfig } from "./NewsModern.model";
 export const NEWS_MODERN_MOCK_DATA: NewsModernConfig = {
   type: "layout-shift",
   placeholder: {
-    showPlaceholder: true,
+    showPlaceholder: false,
     placeholderText: "Loading please wait",
   },
   delay: 3000,

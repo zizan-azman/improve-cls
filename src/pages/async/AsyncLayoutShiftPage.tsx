@@ -1,6 +1,6 @@
-import { NewsModern } from "@/components/news/news-modern/NewsModern";
-import { NEWS_MODERN_MOCK_DATA } from "@/components/news/news-modern/NewsModern.mock";
+import { HeroAsync } from "@/components/hero/hero-async/HeroAsync";
+import { HERO_ASYNC_LAYOUT_SHIFT_MOCK } from "@/mock/HeroAsyncLayoutShift.mock";
 
 export default function AsyncLayoutShiftPage() {
-  return <NewsModern config={NEWS_MODERN_MOCK_DATA} />;
+  return <HeroAsync config={HERO_ASYNC_LAYOUT_SHIFT_MOCK} />;
 }

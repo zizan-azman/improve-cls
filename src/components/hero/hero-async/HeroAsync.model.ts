@@ -11,12 +11,24 @@ interface HeroAsyncTeaser {
   links: LinkArrowConfig[];
 }
 
-interface HeroAsyncContentEndDescription {
-  uniqueID?: string;
-  text: string;
+interface HeroAsyncContentEndDescriptionImage {
   imgAlt: string | undefined;
   imgPath: string | undefined;
   showImage: boolean;
+  controlImgHeight: boolean;
+}
+
+interface HeroAsyncContentEndDescriptionVideo {
+  videoPath: string | undefined;
+  showVideo: boolean;
+  controlVideoHeight: boolean;
+}
+
+interface HeroAsyncContentEndDescription {
+  uniqueID?: string;
+  text: string;
+  imgConfig?: HeroAsyncContentEndDescriptionImage;
+  videoConfig?: HeroAsyncContentEndDescriptionVideo;
 }
 
 interface HeroAsyncContentEnd {
