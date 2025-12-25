@@ -6,28 +6,55 @@ export const NEWS_MODERN_MOCK_DATA: NewsModernConfig = {
     showPlaceholder: false,
     placeholderText: "Loading please wait",
   },
-  delay: 3000,
+  delay: 2000,
   news: [
     {
       uniqueID: "1",
-      dateDay: "12",
-      dateMonth: "Sep",
+      dateDay: "11",
+      dateMonth: "Jul",
       category: "News",
-      description: "This is a description",
+      description:
+        "Siera expands its rescue network with two new partner shelters across Southeast Asia.",
     },
     {
       uniqueID: "2",
-      dateDay: "10",
-      dateMonth: "Sep",
-      category: "Announcement",
-      description: "This is a description",
+      dateDay: "28",
+      dateMonth: "Jun",
+      category: "News",
+      description:
+        "Breakthrough in feline rehabilitation: Siera introduces personalised recovery plans.",
     },
     {
       uniqueID: "3",
-      dateDay: "8",
-      dateMonth: "Sep",
+      dateDay: "6",
+      dateMonth: "Jun",
+      category: "Announcement",
+      description:
+        "Siera launches its first AI-assisted monitoring system for long-term care cats.",
+    },
+    {
+      uniqueID: "4",
+      dateDay: "19",
+      dateMonth: "May",
       category: "News",
-      description: "This is a description",
+      description:
+        "Community fosters surpass 1,000 successful placements this month.",
+    },
+    {
+      uniqueID: "5",
+      dateDay: "3",
+      dateMonth: "Apr",
+      category: "News",
+      description:
+        "Siera collaborates with behavioural experts to improve trauma-based recovery.",
+    },
+    {
+      uniqueID: "5",
+      dateDay: "14",
+      dateMonth: "Mar",
+      category: "Announcement",
+      description:
+        "Siera commits to a new sustainability effort using eco-certified facility materials.",
     },
   ],
 

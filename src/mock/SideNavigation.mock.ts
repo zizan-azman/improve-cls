@@ -103,12 +103,12 @@ export const SIDE_NAVIGATION_MOCK: SideNavigationConfig = {
         },
         {
           path: "/async/loading-placeholder",
-          text: "Loading Placeholder",
+          text: "Loading placeholder",
           uniqueID: "2",
         },
         {
-          path: "/async/min-width-height",
-          text: "Add min width or height",
+          path: "/async/temporary-skeleton",
+          text: "Temporary skeleton",
           uniqueID: "3",
         },
       ],

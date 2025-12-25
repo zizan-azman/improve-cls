@@ -18,7 +18,7 @@ import {
 import {
   AsyncLayoutShiftPage,
   AsyncLoadingPlaceholderPage,
-  AsyncMinWidthHeightPage,
+  AsyncTemporarySkeletonPage,
 } from "@/pages/async";
 
 export const router = createBrowserRouter([
@@ -74,12 +74,12 @@ export const router = createBrowserRouter([
         element: <AsyncLayoutShiftPage />,
       },
       {
-        path: "async/min-width-height",
-        element: <AsyncMinWidthHeightPage />,
-      },
-      {
         path: "async/loading-placeholder",
         element: <AsyncLoadingPlaceholderPage />,
+      },
+      {
+        path: "async/temporary-skeleton",
+        element: <AsyncTemporarySkeletonPage />,
       },
 
       // Wildcard fallback

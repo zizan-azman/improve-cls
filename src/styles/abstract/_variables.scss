@@ -16,6 +16,7 @@ $color-indigo-500: #4f46e5;
 $color-indigo-950: #0f172a;
 // $color-grey-50: #f8fafc;
 // $color-grey-100: #f1f5f9;
+$color-grey-100: #edeef0;
 $color-grey-200: #94a3b8;
 // $color-grey-300: #cbd5e1;
 // $color-grey-400: #94a3b8;
@@ -46,7 +47,7 @@ $border-width-3: 3px;
 
 /* Mapped variables */
 $mapped-background-color: $color-white;
-$mapped-background-subtle-color: $color-grey-500;
+$mapped-background-subtle-color: $color-grey-100;
 $mapped-text-color: $color-black;
 $mapped-text-subtle-color: $color-grey-200;
 $mapped-stroke-color: $color-black;
@@ -56,6 +57,8 @@ $mapped-accent-color: $color-indigo-500;
 $mapped-accent-minimal-color: $color-indigo-400;
 $mapped-accent-subtle-color: $color-indigo-200;
 $mapped-accent-bold-color: $color-indigo-950;
+$mapped-secondary-color: $color-indigo-950;
+$mapped-on-secondary-background-subtle-color: $color-grey-500;
 $mapped-border-radius-none: $border-radius-0;
 $mapped-border-radius-xs: $border-radius-4;
 $mapped-border-radius-sm: $border-radius-8;

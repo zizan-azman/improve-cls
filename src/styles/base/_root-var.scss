@@ -10,6 +10,8 @@
   --accent-minimal-color: #{var.$mapped-accent-minimal-color};
   --accent-subtle-color: #{var.$mapped-accent-subtle-color};
   --accent-bold-color: #{var.$mapped-accent-bold-color};
+  --secondary-color: #{var.$mapped-secondary-color};
+  --on-secondary-background-subtle-color: #{var.$mapped-on-secondary-background-subtle-color};
   --stroke-color: #{var.$mapped-stroke-color};
   --stroke-subtle-color: #{var.$mapped-stroke-subtle-color};
   --border-radius-scale: 1;
@@ -46,6 +48,10 @@ $accent-color: var(--accent-color);
 $accent-minimal-color: var(--accent-minimal-color);
 $accent-subtle-color: var(--accent-subtle-color);
 $accent-bold-color: var(--accent-bold-color);
+$secondary-color: var(--secondary-color);
+$on-secondary-background-subtle-color: var(
+  --on-secondary-background-subtle-color
+);
 $stroke-color: var(--stroke-color);
 $stroke-subtle-color: var(--stroke-subtle-color);
 $border-radius-scale: var(--border-radius-scale);

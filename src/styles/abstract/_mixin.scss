@@ -79,7 +79,7 @@
 }
 
 // News
-@mixin typography-news-heading {
+@mixin typography-news-date-day {
   font-size: fn.px-to-rem(36px);
   font-weight: 700;
   line-height: fn.px-to-rem(40px);
@@ -90,7 +90,7 @@
   }
 }
 
-@mixin typography-news-heading-subtitle {
+@mixin typography-news-date-month {
   font-size: fn.px-to-rem(36px);
   font-weight: 700;
   line-height: fn.px-to-rem(40px);
@@ -101,18 +101,7 @@
   }
 }
 
-@mixin typography-news-item-tag {
-  font-size: fn.px-to-rem(36px);
-  font-weight: 700;
-  line-height: fn.px-to-rem(40px);
-
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
-  }
-}
-
-@mixin typography-news-item-title {
+@mixin typography-news-item-category {
   font-size: fn.px-to-rem(36px);
   font-weight: 700;
   line-height: fn.px-to-rem(40px);
@@ -130,6 +119,17 @@
 
   @include breakpoint-up(sm) {
     font-size: fn.px-to-rem(48px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-news-loading-text {
+  font-size: fn.px-to-rem(24px);
+  font-weight: 600;
+  line-height: 1.5;
+
+  @include breakpoint-up(lg) {
+    font-size: fn.px-to-rem(36px);
     line-height: 1;
   }
 }

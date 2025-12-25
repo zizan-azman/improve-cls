@@ -1,15 +1,26 @@
-import heroVideoLayoutShift1 from "@/assets/images/hero-video/layout-shift/hero-video-no-dimension.png";
+import heroAsyncLayoutShift1 from "@/assets/images/hero-async/layout-shift/hero-async-render.png";
+import heroAsyncLayoutShift2 from "@/assets/images/hero-async/layout-shift/layout-shift.webm";
+import heroAsyncLayoutShift3 from "@/assets/images/hero-async/layout-shift/hero-async-layout-shift-cls.png";
 import type { HeroAsyncConfig } from "@/components/hero/hero-async/HeroAsync.model";
-import { NEWS_MODERN_MOCK_DATA } from "@/components/news/news-modern/NewsModern.mock";
+import { NEWS_ITEMS_MOCK } from "./NewsItems.mock";
 
 export const HERO_ASYNC_LAYOUT_SHIFT_MOCK: HeroAsyncConfig = {
-  heading: "Layout shift caused by video element inside a flex container",
+  heading: "Layout Shift Caused by Asynchronously Loaded Data",
   teaser: {
-    newsConfig: NEWS_MODERN_MOCK_DATA,
+    newsConfig: {
+      type: "layout-shift",
+      delay: 2000,
+      emptyData: "Sorry, there are no available data to display >__<",
+      placeholder: {
+        placeholderText: "Please wait while data is loading (^o^)b",
+        showPlaceholder: false,
+      },
+      news: NEWS_ITEMS_MOCK,
+    },
     paragraphs: [
       {
         uniqueID: "1",
-        text: "The video shown here triggers a significant layout shift when it finishes loading.",
+        text: "This News component triggers a significant layout shift when it finishes loading.",
       },
       {
         uniqueID: "2",
@@ -23,13 +34,13 @@ export const HERO_ASYNC_LAYOUT_SHIFT_MOCK: HeroAsyncConfig = {
     links: [
       {
         uniqueID: "1",
-        path: "/video/width-height",
-        text: "Width and Height solution",
+        path: "/async/loading-placeholder",
+        text: "Loading placeholder solution",
       },
       {
         uniqueID: "2",
-        path: "/video/aspect-ratio",
-        text: "Aspect ratio solution",
+        path: "/async/temporary-skeleton",
+        text: "Temporary skeleton solution",
       },
     ],
   },
@@ -37,65 +48,59 @@ export const HERO_ASYNC_LAYOUT_SHIFT_MOCK: HeroAsyncConfig = {
     descriptions: [
       {
         uniqueID: "0",
-        text: "In this example, we have a video element inside a typical flex container. This video element does not have any width and height attribute. It also does not have any width and height styling.",
-        imgConfig: {
-          showImage: true,
-          controlImgHeight: false,
-          imgAlt: "Screenshot of video element with no size dimension",
-          imgPath: heroVideoLayoutShift1,
-        },
+        text: "In this example, we have a News Component that loads its data asynchronously. The data gets loaded after a 2-second delay.",
       },
       {
         uniqueID: "1",
-        text: "Because the video element does not have any size dimension, this page experiences a visible layout shift when the video finishes loading.",
+        text: "While the data is being fetched, no space is reserved for the incoming News content. As a result, the content below the News component is initially rendered at the top of the page.",
         imgConfig: {
           showImage: true,
-          controlImgHeight: false,
-          imgAlt: "Screenshot of video element with no size dimension",
-          imgPath: heroVideoLayoutShift1,
+          controlImgHeight: true,
+          imgAlt: "Screenshot of News Component with no reserved space",
+          imgPath: heroAsyncLayoutShift1,
         },
       },
       {
         uniqueID: "2",
-        text: "As a result, the browser initially renders it with zero dimensions and later recalculates its size once the video loads—pushing content below it and causing a visible layout shift.",
-        imgConfig: {
-          showImage: true,
-          controlImgHeight: false,
-          imgAlt: "Screenshot of video element with no size dimension",
-          imgPath: heroVideoLayoutShift1,
+        text: "Once the data finally loads, the News component appears and pushes the content beneath it downward, causing a noticeable layout shift.",
+        videoConfig: {
+          controlVideoHeight: false,
+          showVideo: true,
+          videoPath: heroAsyncLayoutShift2,
         },
       },
       {
         uniqueID: "3",
-        text: "When running a Lighthouse report (Desktop), the results show that this page has a poor Cumulative Layout Shift (CLS) score.",
+        text: "When we run the Lighthouse report on this page, we get a poor CLS score. This not only gives a poor user experience, but also negatively impacts SEO.",
         imgConfig: {
           showImage: true,
           controlImgHeight: false,
-          imgAlt: "Screenshot of video element with no size dimension",
-          imgPath: heroVideoLayoutShift1,
+          imgAlt:
+            "Screenshot of poor CLS score caused by News component with layout shift",
+          imgPath: heroAsyncLayoutShift3,
         },
       },
       {
         uniqueID: "4",
-        text: "To learn how to fix this layout shift and improve the CLS score, check out the links below.",
+        text: "To fix this layout shift and improve CLS score, check out the links below.",
         imgConfig: {
-          showImage: true,
+          showImage: false,
           controlImgHeight: false,
-          imgAlt: "Screenshot of video element with no size dimension",
-          imgPath: heroVideoLayoutShift1,
+          imgAlt: undefined,
+          imgPath: undefined,
         },
       },
     ],
     links: [
       {
         uniqueID: "1",
-        path: "/video/width-height",
-        text: "Width and Height solution",
+        path: "/async/loading-placeholder",
+        text: "Loading placeholder solution",
       },
       {
         uniqueID: "2",
-        path: "/video/aspect-ratio",
-        text: "Aspect ratio solution",
+        path: "/async/temporary-skeleton",
+        text: "Temporary skeleton solution",
       },
     ],
   },

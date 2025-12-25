@@ -2,7 +2,7 @@
 @use "@/styles/base/index-base" as root;
 
 .side-navigation {
-  --side-navigation-bg-color: #{root.$accent-bold-color};
+  --side-navigation-bg-color: #{root.$secondary-color};
   --side-navigation-mobile-bg-color: #{root.$background-color};
   --side-navigation-padding: 0 #{root.$spacing-md};
   --side-navigation-logo-text-color: #{root.$on-accent-text-color};
@@ -106,11 +106,11 @@
     transition: background-color 0.35s ease-in-out;
 
     &:hover {
-      background-color: var(--background-subtle-color);
+      background-color: var(--on-secondary-background-subtle-color);
     }
 
     &:has(+ .side-navigation__links-container .side-navigation__link--active) {
-      background-color: var(--background-subtle-color);
+      background-color: var(--on-secondary-background-subtle-color);
     }
 
     &--expand {
@@ -156,7 +156,7 @@
     display: block;
 
     &:hover {
-      background-color: var(--background-subtle-color);
+      background-color: var(--on-secondary-background-subtle-color);
     }
 
     &--active,
