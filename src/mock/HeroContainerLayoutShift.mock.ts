@@ -5,7 +5,7 @@ import type { HeroContainerConfig } from "@/components/hero/hero-container/HeroC
 
 export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
   type: "layout-shift",
-  heading: "Layout Shift caused by Media Containers inside a flex container",
+  heading: "Layout shift caused by Media Containers inside a flex container",
   teaser: {
     imgWidth: undefined,
     imgHeight: undefined,
@@ -39,7 +39,7 @@ export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
         showImage: false,
         imgAlt: undefined,
         imgPath: undefined,
-        text: "In this example, we have a Hero component that contains an image wrapped inside a media container. Because neither the image nor its container has a predefined width and height, the page experiences a visible layout shift when the image finishes loading.",
+        text: "In this example, we have an img element wrapped inside a media container. Because neither the image nor its container has a predefined width and height, the page experiences a visible layout shift when the image finishes loading.",
       },
       {
         uniqueID: "1",

@@ -51,6 +51,11 @@ export function SideNavigation({ config }: SideNavigationProps) {
 
   const isGroupExpanded = (groupId: string) => expandedGroup === groupId;
 
+  const handleSoloGroupClick = (groupId: string) => {
+    closeNav();
+    toggleGroup(groupId);
+  };
+
   return (
     <nav className={styles["side-navigation"]} aria-label="Primary navigation">
       <button
@@ -83,12 +88,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
         )}
         aria-hidden={!isOpen}
       >
-        <NavLink
-          to={logo.path}
-          className={styles["side-navigation__logo"]}
-          aria-label="Go to homepage"
-          onClick={closeNav}
-        >
+        <div className={styles["side-navigation__logo"]}>
           <svg
             className={styles["side-navigation__logo-icon"]}
             width={logo.width}
@@ -97,12 +97,39 @@ export function SideNavigation({ config }: SideNavigationProps) {
           >
             <use href={logo.id} />
           </svg>
-
           <span className={styles["side-navigation__logo-text"]}>
             {logo.text}
           </span>
-        </NavLink>
+        </div>
         <ul className={styles["side-navigation__groups-container"]} role="list">
+          <li className={styles["side-navigation__group-item"]}>
+            <NavLink
+              to="/"
+              aria-label="Go to homepage"
+              onClick={() => handleSoloGroupClick("home")}
+              className={({ isActive }) =>
+                getNavLinkClass(
+                  isActive,
+                  styles["side-navigation__group-button-solo"],
+                  styles["side-navigation__group-button-solo--active"]
+                )
+              }
+            >
+              <div className={styles["side-navigation__group-logo-text"]}>
+                <svg
+                  className={styles["side-navigation__group-prefix-icon"]}
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use href="#home"></use>
+                </svg>
+                <span className={styles["side-navigation__group-text"]}>
+                  Home
+                </span>
+              </div>
+            </NavLink>
+          </li>
           {groups.map((group) => (
             <li
               key={group.uniqueID}
@@ -166,6 +193,34 @@ export function SideNavigation({ config }: SideNavigationProps) {
               </div>
             </li>
           ))}
+          <li className={styles["side-navigation__group-item"]}>
+            <NavLink
+              to="/conclusion"
+              aria-label="Go to conclusion page"
+              onClick={() => handleSoloGroupClick("conclusion")}
+              className={({ isActive }) =>
+                getNavLinkClass(
+                  isActive,
+                  styles["side-navigation__group-button-solo"],
+                  styles["side-navigation__group-button-solo--active"]
+                )
+              }
+            >
+              <div className={styles["side-navigation__group-logo-text"]}>
+                <svg
+                  className={styles["side-navigation__group-prefix-icon"]}
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use href="#summarize"></use>
+                </svg>
+                <span className={styles["side-navigation__group-text"]}>
+                  Conclusion
+                </span>
+              </div>
+            </NavLink>
+          </li>
         </ul>
       </aside>
     </nav>

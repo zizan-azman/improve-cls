@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "./App";
 import HomePage from "@/pages/home/HomePage";
+import ConclusionPage from "@/pages/conclusion/ConclusionPage";
 import {
   ContainerLayoutShiftPage,
   ContainerWidthHeightPage,
@@ -80,6 +81,12 @@ export const router = createBrowserRouter([
       {
         path: "async/temporary-skeleton",
         element: <AsyncTemporarySkeletonPage />,
+      },
+
+      // Conclusion
+      {
+        path: "conclusion",
+        element: <ConclusionPage />,
       },
 
       // Wildcard fallback
