@@ -1,6 +1,6 @@
+import { getEmphasizeClass, getModifierClass } from "@/utils/GetClass.utils";
 import type { HeroIntroProps } from "./HeroIntro.model";
 import styles from "./HeroIntro.module.scss";
-import { getHeroDescriptionMediaClass } from "./HeroIntro.utils";
 
 export function HeroIntro({ config }: HeroIntroProps) {
   const { heading, descriptions } = config;
@@ -14,7 +14,15 @@ export function HeroIntro({ config }: HeroIntroProps) {
             className={styles["hero-intro__description-item"]}
           >
             <p className={styles["hero-intro__paragraph"]}>
-              {description.paragraph}
+              {description.textParts?.map((part, index) => {
+                if (typeof part === "string") return part;
+
+                return (
+                  <span key={index} className={getEmphasizeClass(part.type)}>
+                    {part.text}
+                  </span>
+                );
+              })}
             </p>
 
             {description.imgConfig && (
@@ -23,7 +31,7 @@ export function HeroIntro({ config }: HeroIntroProps) {
                 alt={description.imgConfig.imgAlt}
                 width={description.imgConfig.imgWidth}
                 height={description.imgConfig.imgHeight}
-                className={getHeroDescriptionMediaClass(
+                className={getModifierClass(
                   description.imgConfig.controlHeight,
                   styles["hero-intro__description-image"],
                   styles["hero-intro__description-image--control-height"]
@@ -34,7 +42,7 @@ export function HeroIntro({ config }: HeroIntroProps) {
             {description.videoConfig && (
               <video
                 src={description.videoConfig.videoPath}
-                className={getHeroDescriptionMediaClass(
+                className={getModifierClass(
                   description.videoConfig.controlHeight,
                   styles["hero-intro__description-video"],
                   styles["hero-intro__description-video--control-height"]

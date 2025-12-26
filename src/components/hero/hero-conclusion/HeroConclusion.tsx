@@ -1,9 +1,6 @@
+import { getEmphasizeClass, getModifierClass } from "@/utils/GetClass.utils";
 import type { HeroConclusionProps } from "./HeroConclusion.model";
 import styles from "./HeroConclusion.module.scss";
-import {
-  getEmphasizeClass,
-  getHeroDescriptionMediaClass,
-} from "./HeroConclusion.utils";
 
 export function HeroConclusion({ config }: HeroConclusionProps) {
   const { heading, descriptions } = config;
@@ -34,7 +31,7 @@ export function HeroConclusion({ config }: HeroConclusionProps) {
                 alt={description.imgConfig.imgAlt}
                 width={description.imgConfig.imgWidth}
                 height={description.imgConfig.imgHeight}
-                className={getHeroDescriptionMediaClass(
+                className={getModifierClass(
                   description.imgConfig.controlHeight,
                   styles["hero-conclusion__description-image"],
                   styles["hero-conclusion__description-image--control-height"]
@@ -45,7 +42,7 @@ export function HeroConclusion({ config }: HeroConclusionProps) {
             {description.videoConfig && (
               <video
                 src={description.videoConfig.videoPath}
-                className={getHeroDescriptionMediaClass(
+                className={getModifierClass(
                   description.videoConfig.controlHeight,
                   styles["hero-conclusion__description-video"],
                   styles["hero-conclusion__description-video--control-height"]

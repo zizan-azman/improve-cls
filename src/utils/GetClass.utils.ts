@@ -1,9 +1,9 @@
-export function getHeroDescriptionMediaClass(
-  useHeight: boolean,
+export function getModifierClass(
+  condition: boolean,
   base: string,
   modifier: string
 ) {
-  return useHeight ? `${base} ${modifier}` : `${base}`;
+  return condition ? `${base} ${modifier}` : `${base}`;
 }
 
 export const getEmphasizeClass = (type: string): string => {
@@ -16,6 +16,8 @@ export const getEmphasizeClass = (type: string): string => {
       return "emphasize--bold-italic";
     case "code":
       return "emphasize--code";
+    case "normal":
+      return "";
     default:
       return "";
   }
