@@ -1,0 +1,25 @@
+@use "../abstract/index-abstract.scss" as var;
+@use "../base/index-base.scss" as root;
+
+.emphasize {
+  --emphasize-code-padding: #{root.$spacing-4xs};
+  --emphasize-code-border-radius: #{root.$border-radius-xs};
+  --emphasize-code-background-color: #{root.$background-subtle-color};
+
+  &--bold {
+    font-weight: 700;
+  }
+  &--italic {
+    font-style: italic;
+  }
+  &--bold-italic {
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  &--code {
+    padding: var(--emphasize-code-padding);
+    border-radius: var(--emphasize-code-border-radius);
+    background-color: var(--emphasize-code-background-color);
+  }
+}

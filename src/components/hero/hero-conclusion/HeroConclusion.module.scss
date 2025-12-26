@@ -1,0 +1,72 @@
+@use "@/styles/abstract/index-abstract" as abs;
+@use "@/styles/base/index-base" as root;
+
+.hero-conclusion {
+  background-color: transparent;
+
+  &__heading {
+    margin-bottom: var(--spacing-lg);
+    @include abs.typography-hero-heading;
+  }
+
+  &__content {
+    background-color: transparent;
+  }
+
+  &__description-item {
+    background-color: transparent;
+    margin-bottom: var(--spacing-md);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__paragraph {
+    @include abs.typography-hero-description;
+  }
+
+  &__description-image {
+    height: auto;
+    width: 100%;
+    margin-top: var(--spacing-md);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+
+    @include abs.breakpoint-up(lg) {
+      width: 320px;
+    }
+
+    &--control-height {
+      height: auto;
+      width: 100%;
+
+      @include abs.breakpoint-up(lg) {
+        height: 320px;
+        width: auto;
+      }
+    }
+  }
+
+  &__description-video {
+    height: auto;
+    width: 100%;
+    margin-top: var(--spacing-md);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+
+    @include abs.breakpoint-up(lg) {
+      width: 320px;
+    }
+
+    &--control-height {
+      height: auto;
+      width: 100%;
+
+      @include abs.breakpoint-up(lg) {
+        height: 320px;
+        width: auto;
+      }
+    }
+  }
+}

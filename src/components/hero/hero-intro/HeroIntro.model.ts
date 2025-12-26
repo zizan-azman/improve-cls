@@ -12,6 +12,7 @@ interface HeroIntroImg {
   imgHeight: string;
   controlHeight: boolean;
 }
+
 interface HeroIntroDescription {
   uniqueID: string;
   paragraph: string;
