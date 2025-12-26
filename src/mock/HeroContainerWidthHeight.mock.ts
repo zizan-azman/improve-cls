@@ -5,7 +5,7 @@ import type { HeroContainerConfig } from "@/components/hero/hero-container/HeroC
 
 export const HERO_CONTAINER_WIDTH_HEIGHT_MOCK: HeroContainerConfig = {
   type: "container-dimension",
-  heading: "Fix layout shift by defining width and height on media containers",
+  heading: "Fix layout shift using width and height on media containers",
   teaser: {
     imgWidth: "640",
     imgHeight: "360",

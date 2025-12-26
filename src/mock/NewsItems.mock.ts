@@ -42,7 +42,7 @@ export const NEWS_ITEMS_MOCK: NewsModernItem[] = [
       "Siera collaborates with behavioural experts to improve trauma-based recovery.",
   },
   {
-    uniqueID: "5",
+    uniqueID: "6",
     dateDay: "14",
     dateMonth: "Mar",
     category: "Announcement",
