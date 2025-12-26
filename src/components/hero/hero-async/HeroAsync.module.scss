@@ -108,7 +108,7 @@
       width: 100%;
 
       @include abs.breakpoint-up(lg) {
-        height: 80px;
+        height: 300px;
         width: auto;
       }
     }

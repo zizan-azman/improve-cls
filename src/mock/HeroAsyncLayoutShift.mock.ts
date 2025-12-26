@@ -1,5 +1,5 @@
 import heroAsyncLayoutShift1 from "@/assets/images/hero-async/layout-shift/hero-async-render.png";
-import heroAsyncLayoutShift2 from "@/assets/images/hero-async/layout-shift/layout-shift.webm";
+import heroAsyncLayoutShift2 from "@/assets/images/hero-async/layout-shift/layout-shift-sample.mp4";
 import heroAsyncLayoutShift3 from "@/assets/images/hero-async/layout-shift/hero-async-layout-shift-cls.png";
 import type { HeroAsyncConfig } from "@/components/hero/hero-async/HeroAsync.model";
 import { NEWS_ITEMS_MOCK } from "./NewsItems.mock";
@@ -64,7 +64,7 @@ export const HERO_ASYNC_LAYOUT_SHIFT_MOCK: HeroAsyncConfig = {
         uniqueID: "2",
         text: "Once the data finally loads, the News component appears and pushes the content beneath it downward, causing a noticeable layout shift.",
         videoConfig: {
-          controlVideoHeight: false,
+          controlVideoHeight: true,
           showVideo: true,
           videoPath: heroAsyncLayoutShift2,
         },

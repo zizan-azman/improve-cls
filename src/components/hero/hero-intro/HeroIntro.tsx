@@ -1,5 +1,6 @@
 import type { HeroIntroProps } from "./HeroIntro.model";
 import styles from "./HeroIntro.module.scss";
+import { getHeroDescriptionMediaClass } from "./HeroIntro.utils";
 
 export function HeroIntro({ config }: HeroIntroProps) {
   const { heading, descriptions } = config;
@@ -22,14 +23,22 @@ export function HeroIntro({ config }: HeroIntroProps) {
                 alt={description.imgConfig.imgAlt}
                 width={description.imgConfig.imgWidth}
                 height={description.imgConfig.imgHeight}
-                className={styles["hero-intro__description-image"]}
+                className={getHeroDescriptionMediaClass(
+                  description.imgConfig.controlHeight,
+                  styles["hero-intro__description-image"],
+                  styles["hero-intro__description-image--control-height"]
+                )}
               />
             )}
 
             {description.videoConfig && (
               <video
                 src={description.videoConfig.videoPath}
-                className={styles["hero-intro__description-video"]}
+                className={getHeroDescriptionMediaClass(
+                  description.videoConfig.controlHeight,
+                  styles["hero-intro__description-video"],
+                  styles["hero-intro__description-video--control-height"]
+                )}
                 width={description.videoConfig.videoWidth}
                 height={description.videoConfig.videoHeight}
                 autoPlay
