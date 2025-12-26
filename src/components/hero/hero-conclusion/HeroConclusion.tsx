@@ -1,6 +1,9 @@
 import type { HeroConclusionProps } from "./HeroConclusion.model";
 import styles from "./HeroConclusion.module.scss";
-import { getHeroDescriptionMediaClass } from "./HeroConclusion.utils";
+import {
+  getEmphasizeClass,
+  getHeroDescriptionMediaClass,
+} from "./HeroConclusion.utils";
 
 export function HeroConclusion({ config }: HeroConclusionProps) {
   const { heading, descriptions } = config;
@@ -14,7 +17,15 @@ export function HeroConclusion({ config }: HeroConclusionProps) {
             className={styles["hero-conclusion__description-item"]}
           >
             <p className={styles["hero-conclusion__paragraph"]}>
-              {description.paragraph}
+              {description.textParts?.map((part, index) => {
+                if (typeof part === "string") return part;
+
+                return (
+                  <span key={index} className={getEmphasizeClass(part.type)}>
+                    {part.text}
+                  </span>
+                );
+              })}
             </p>
 
             {description.imgConfig && (

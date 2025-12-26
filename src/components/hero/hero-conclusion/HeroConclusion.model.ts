@@ -14,14 +14,14 @@ interface HeroConclusionImg {
 }
 
 interface HeroConclusionTextPart {
-  type: "bold" | "italic" | "code";
+  type: "bold" | "italic" | "code" | "bold-italic" | "normal";
   text: string;
 }
 
 interface HeroConclusionDescription {
   uniqueID: string;
   paragraph?: string;
-  textPart?: (string | HeroConclusionTextPart)[];
+  textParts?: (string | HeroConclusionTextPart)[];
   imgConfig?: HeroConclusionImg;
   videoConfig?: HeroConclusionVideo;
 }
