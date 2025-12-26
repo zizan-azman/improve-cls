@@ -3,6 +3,7 @@ import styles from "./HeroContainer.module.scss";
 import type { HeroContainerProps } from "./HeroContainer.model";
 import { getHeroContainerClass } from "./HeroContainer.utils";
 import { LinkArrow } from "@/components/link/link-arrow/LinkArrow";
+import { getEmphasizeClass } from "@/utils/GetClass.utils";
 
 export function HeroContainer({ config }: HeroContainerProps) {
   const { type, heading, teaser, contentEnd } = config;
@@ -48,14 +49,25 @@ export function HeroContainer({ config }: HeroContainerProps) {
                 <div className={styles["hero-container__bullet-point"]}></div>
                 <div className="hero-container__description-content-wrapper">
                   <div className={styles["hero-container__description-text"]}>
-                    {description.text}
+                    {description.textParts?.map((part, index) => {
+                      if (typeof part === "string") return part;
+
+                      return (
+                        <span
+                          key={index}
+                          className={getEmphasizeClass(part.type)}
+                        >
+                          {part.text}
+                        </span>
+                      );
+                    })}
                   </div>
-                  {description.showImage && (
+                  {description.imgConfig && (
                     <img
-                      src={description.imgPath}
-                      alt={description.imgAlt}
-                      width="240"
-                      height="80"
+                      src={description.imgConfig.imgPath}
+                      alt={description.imgConfig.imgAlt}
+                      width={description.imgConfig.imgWidth}
+                      height={description.imgConfig.imgHeight}
                       className={styles["hero-container__description-image"]}
                     />
                   )}

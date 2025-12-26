@@ -2,7 +2,9 @@
 @use "@/styles/base/index-base" as root;
 
 .emphasize {
-  display: inline-block;
+  --emphasize-code-padding: #{root.$spacing-4xs root.$spacing-3xs};
+  --emphasize-code-background-color: #{root.$background-subtle-color};
+  --emphasize-code-border-radius: #{root.$border-radius-sm};
 
   &--bold {
     font-weight: 700;
@@ -18,8 +20,8 @@
   }
 
   &--code {
-    padding: root.$spacing-4xs root.$spacing-3xs;
-    border-radius: root.$border-radius-sm;
-    background-color: root.$background-subtle-color;
+    padding: var(--emphasize-code-padding);
+    border-radius: var(--emphasize-code-border-radius);
+    background-color: var(--emphasize-code-background-color);
   }
 }

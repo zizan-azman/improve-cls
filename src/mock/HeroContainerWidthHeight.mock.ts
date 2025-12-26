@@ -40,60 +40,190 @@ export const HERO_CONTAINER_WIDTH_HEIGHT_MOCK: HeroContainerConfig = {
     descriptions: [
       {
         uniqueID: "0",
-        showImage: true,
-        imgAlt:
-          "Screenshot of media container and img styling that fixes layout shifts",
-        imgPath: widthHeight1,
-        text: "In this example, the media container is given explicit width and height values. The image itself is set to width and height of 100% with object-fit: cover, allowing it to scale correctly within the reserved space.",
+        imgConfig: {
+          imgAlt:
+            "Screenshot of media container and img styling that fixes layout shifts",
+          imgPath: widthHeight1,
+          imgWidth: "347",
+          imgHeight: "250",
+        },
+        textParts: [
+          "In this example, the ",
+          {
+            text: "media container ",
+            type: "bold-italic",
+          },
+          "is given ",
+          {
+            text: "explicit width and height ",
+            type: "bold",
+          },
+          "values. The image itself is set to ",
+          {
+            text: "width 100%",
+            type: "code",
+          },
+          ", ",
+          {
+            text: "height 100%",
+            type: "code",
+          },
+          ", and ",
+          {
+            text: "object-fit cover",
+            type: "code",
+          },
+          ". This allows the image to scale correctly inside the media container.",
+        ],
+        text: "In this example, the media container is given explicit width and height values. The image itself is set to width 100%, height 100%, and object-fit cover. This allows the image to scale correctly inside the media container.",
       },
       {
         uniqueID: "1",
-        showImage: true,
-        imgAlt: "Lighthouse improved CLS score",
-        imgPath: widthHeight2,
+        imgConfig: {
+          imgAlt: "Lighthouse improved CLS score",
+          imgPath: widthHeight2,
+          imgWidth: "211",
+          imgHeight: "78",
+        },
+        textParts: [
+          "After ",
+          {
+            text: "defining dimensions ",
+            type: "bold",
+          },
+          "on the ",
+          {
+            text: "media container, ",
+            type: "bold-italic",
+          },
+          "running a ",
+          {
+            text: "Lighthouse ",
+            type: "bold-italic",
+          },
+          "report shows a significantly ",
+          {
+            text: "improved CLS score.",
+            type: "bold",
+          },
+        ],
         text: "After defining dimensions on the media container, running a Lighthouse report shows a significantly improved CLS score.",
       },
       {
         uniqueID: "2",
-        showImage: false,
-        imgAlt: undefined,
-        imgPath: undefined,
+        textParts: [
+          "This improvement occurs because the browser can ",
+          {
+            text: "allocate the required space ",
+            type: "bold",
+          },
+          "during the initial render, ",
+          {
+            text: "preventing content from being pushed down ",
+            type: "bold",
+          },
+          "when the image finishes loading.",
+        ],
         text: "This improvement occurs because the browser can allocate the required space during the initial render, preventing content from being pushed down when the image finishes loading.",
       },
       {
         uniqueID: "3",
-        showImage: false,
-        imgAlt: undefined,
-        imgPath: undefined,
+        textParts: [
+          "By ",
+          {
+            text: "defining width and height ",
+            type: "bold",
+          },
+          "on the ",
+          {
+            text: "media container, ",
+            type: "bold-italic",
+          },
+          "the layout remains ",
+          {
+            text: "stable.",
+            type: "bold",
+          },
+        ],
         text: "By defining width and height on the media container, the layout remains stable regardless of the image loading state.",
       },
       {
         uniqueID: "4",
-        showImage: false,
-        imgAlt: undefined,
-        imgPath: undefined,
-        text: "Setting the img element to width: 100% and height: 100%, combined with object-fit: cover, ensures the image fills the container without affecting the layout.",
+        textParts: [
+          "Setting the ",
+          {
+            text: "img element ",
+            type: "bold-italic",
+          },
+          "to ",
+          {
+            text: "width: 100%",
+            type: "code",
+          },
+          ", ",
+          {
+            text: "height: 100%",
+            type: "code",
+          },
+          ", and ",
+          {
+            text: "object-fit: cover",
+            type: "code",
+          },
+          ", ensures the image fills the container without affecting the layout.",
+        ],
+        text: "Setting the img element to width: 100%, height: 100%, and object-fit: cover, ensures the image fills the container without affecting the layout.",
       },
       {
         uniqueID: "5",
-        showImage: false,
-        imgAlt: undefined,
-        imgPath: undefined,
-        text: "This approach is a recommended best practice for preventing layout shifts in responsive designs, especially when working with dynamic or slow-loading media.",
+        imgConfig: {
+          imgAlt:
+            "Screenshot of the img element with width, height, and alt attribute.",
+          imgPath: widthHeight3,
+          imgWidth: "241",
+          imgHeight: "129",
+        },
+        textParts: [
+          "Additionally, it is recommended to ",
+          {
+            text: "define width and height attributes ",
+            type: "bold",
+          },
+          "on the ",
+          {
+            text: "img element ",
+            type: "bold-italic",
+          },
+          "itself to help the ",
+          {
+            text: "browser reserve space and prevent layout shifts. ",
+            type: "bold",
+          },
+          "It is also recommended to add the ",
+          {
+            text: "img alt attribute ",
+            type: "bold",
+          },
+          "as it improves your ",
+          {
+            text: "Lighthouse Accessibility ",
+            type: "bold-italic",
+          },
+          "and ",
+          { text: "SEO score.", type: "bold-italic" },
+        ],
+        text: "Additionally, it is recommended to define width and height attributes on the img element itself to help the browser reserve space and prevent layout shifts. It is also recommended to add the img alt attribute as it improves your Lighthouse Accessibility and SEO score.",
       },
       {
         uniqueID: "6",
-        showImage: true,
-        imgAlt:
-          "Screenshot of the img element with width, height, and alt attribute.",
-        imgPath: widthHeight3,
-        text: "It is also recommended to define width and height attributes on the img element itself to help the browser reserve space and prevent layout shifts. This will improve the Lighthouse performance score. Additionally, it is also recommended to add the alt attribute to your media elements as it improves your Lighthouse Accessibility and SEO score.",
-      },
-      {
-        uniqueID: "7",
-        showImage: false,
-        imgAlt: undefined,
-        imgPath: undefined,
+        textParts: [
+          "To revisit the original layout shift example, ",
+          {
+            text: "check out ",
+            type: "bold",
+          },
+          "the link below.",
+        ],
         text: "To revisit the original layout shift example, check out the link below.",
       },
     ],

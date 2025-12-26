@@ -4,6 +4,7 @@ interface HeroContainerTeaserParagraph {
   uniqueID?: string;
   text: string;
 }
+
 interface HeroContainerTeaser {
   imgWidth: string | undefined;
   imgHeight: string | undefined;
@@ -12,12 +13,23 @@ interface HeroContainerTeaser {
   links: LinkArrowConfig[];
 }
 
+interface HeroContainerDescriptionImg {
+  imgAlt: string;
+  imgPath: string;
+  imgWidth: string;
+  imgHeight: string;
+}
+
+interface HeroContainerTextPart {
+  type: "bold" | "italic" | "code" | "bold-italic" | "normal";
+  text: string;
+}
+
 interface HeroContainerContentEndDescription {
   uniqueID?: string;
-  text: string;
-  imgAlt: string | undefined;
-  imgPath: string | undefined;
-  showImage: boolean;
+  text?: string;
+  textParts?: (string | HeroContainerTextPart)[];
+  imgConfig?: HeroContainerDescriptionImg;
 }
 
 interface HeroContainerContentEnd {
