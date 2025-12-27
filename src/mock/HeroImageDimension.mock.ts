@@ -279,13 +279,13 @@ export const HERO_IMAGE_DIMENSION_MOCK: HeroImageConfig = {
             text: "video",
             type: "bold-italic",
           },
-          ". Because these values are applied after the initial layout is rendered, they can introduce late layout changes and result in ",
+          ". This is because, the values are applied after the initial layout is rendered. This can introduce late layout changes and result in ",
           {
             text: "layout shifts.",
             type: "bold",
           },
         ],
-        text: "It is important to avoid using JavaScript to calculate the width and height of media elements such as img and video. Because these values are applied after the initial layout is rendered, they can introduce late layout changes and result in layout shifts.",
+        text: "It is important to avoid using JavaScript to calculate the width and height of media elements such as img and video. This is because, the values are applied after the initial layout is rendered. This can introduce late layout changes and result in layout shifts.",
       },
       {
         uniqueID: "5",

@@ -48,17 +48,42 @@ export const HERO_INTRO_MOCK: HeroIntroConfig = {
     {
       uniqueID: "2",
       textParts: [
-        "Improving CLS is also crucial for ",
+        "Improving CLS is also ",
         {
-          text: "search engine optimization (SEO). ",
+          text: "crucial",
           type: "bold",
         },
-        "Google considers CLS as part of its ",
+        " for ",
         {
-          text: "Core Web Vitals, ",
+          text: "search engine optimization (SEO)",
           type: "bold",
         },
-        "and pages with minimal layout shifts are more likely to rank higher in search results. By minimizing layout shifts, you create a more stable and professional website that users trust and enjoy.",
+        ". Google considers CLS as part of its ",
+        {
+          text: "Core Web Vitals",
+          type: "bold",
+        },
+        ", and pages with ",
+        {
+          text: "minimal layout shifts",
+          type: "bold",
+        },
+        " are more likely to ",
+        {
+          text: "rank higher in search results",
+          type: "bold",
+        },
+        ". By minimizing layout shifts, you create a more ",
+        {
+          text: "stable",
+          type: "bold",
+        },
+        " and ",
+        {
+          text: "professional",
+          type: "bold",
+        },
+        " website that users trust and enjoy.",
       ],
       paragraph:
         "Improving CLS is also crucial for search engine optimization (SEO). Google considers CLS as part of its Core Web Vitals, and pages with minimal layout shifts are more likely to rank higher in search results. By minimizing layout shifts, you create a more stable and professional website that users trust and enjoy.",
@@ -111,28 +136,28 @@ export const HERO_INTRO_MOCK: HeroIntroConfig = {
           text: "placeholder skeletons",
           type: "bold-italic",
         },
-        "—can lead to a smoother, more reliable user experience.",
+        "—can help reduce layout shifts.",
       ],
       paragraph:
         "After these examples, you'll gain a better understanding of how layout shifts occur and how simple adjustments—like defining dimensions, using object-fit, or adding placeholder skeletons—can lead to a smoother, more reliable user experience.",
     },
-    {
-      uniqueID: "5",
-      textParts: [
-        "By improving CLS, you not only ",
-        {
-          text: "enhance user experience ",
-          type: "bold",
-        },
-        "but also improve your site's visibility and performance in ",
-        {
-          text: "SEO ",
-          type: "bold",
-        },
-        "rankings.",
-      ],
-      paragraph:
-        "By improving CLS, you not only enhance user experience but also improve your site's visibility and performance in SEO rankings.",
-    },
+    // {
+    //   uniqueID: "5",
+    //   textParts: [
+    //     "By improving CLS, you not only ",
+    //     {
+    //       text: "enhance user experience ",
+    //       type: "bold",
+    //     },
+    //     "but also improve your site's visibility and performance in ",
+    //     {
+    //       text: "SEO ",
+    //       type: "bold",
+    //     },
+    //     "rankings.",
+    //   ],
+    //   paragraph:
+    //     "By improving CLS, you not only enhance user experience but also improve your site's visibility and performance in SEO rankings.",
+    // },
   ],
 };

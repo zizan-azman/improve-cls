@@ -186,7 +186,7 @@ export const HERO_VIDEO_DIMENSION_MOCK: HeroVideoConfig = {
             text: "videos",
             type: "bold-italic",
           },
-          ". Because these values are applied after the initial layout renders, they can introduce late layout changes and result in ",
+          ". This is because, the values are applied after the initial layout renders. This can introduce late layout changes and result in ",
           {
             text: "layout shifts",
             type: "bold",
