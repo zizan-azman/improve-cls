@@ -2,90 +2,140 @@
 @use "@/styles/base/index-base" as root;
 
 .hero-container {
+  /* Modifier */
+  --hero-container-dimension-media-container-width: 100%;
+  --hero-container-dimension-media-container-desktop-width: 35vw;
+  --hero-container-dimension-media-container-height: 240px;
+  --hero-container-dimension-media-container-desktop-height: 360px;
+  --hero-container-dimension-media-container-border-radius: #{root.$border-radius-sm};
+  --hero-container-dimension-media-width: 100%;
+  --hero-container-dimension-media-height: 100%;
+  /* Heading */
+  --hero-container-heading-margin-bottom: #{root.$spacing-lg};
+  /* Teaser */
+  --hero-container-teaser-gap: #{root.$spacing-md};
+  --hero-container-teaser-margin-bottom: #{root.$spacing-md};
+  /* Paragraphs Container */
+  --hero-container-paragraphs-container-margin-bottom: #{root.$spacing-md};
+  /* Paragraph */
+  --hero-container-paragraph-margin-bottom: #{root.$spacing-sm};
+  /* Links Container */
+  --hero-container-links-container-gap: #{root.$spacing-4xs};
+  /* Descriptions Container */
+  --hero-container-descriptions-container-margin-bottom: #{root.$spacing-md};
+  /* Description */
+  --hero-container-description-gap: #{root.$spacing-xs};
+  --hero-container-description-margin-bottom: #{root.$spacing-sm};
+  /* Bullet Point */
+  --hero-container-bullet-point-width: 8px;
+  --hero-container-bullet-point-height: 8px;
+  --hero-container-bullet-point-margin-top: #{root.$spacing-2xs};
+  --hero-container-bullet-point-border: 2px solid #{root.$accent-color};
+  --hero-container-bullet-point-border-radius: 50%;
+  /* Description Text */
+  --hero-container-description-text-margin-bottom: #{root.$spacing-4xs};
+  /* Description Image */
+  --hero-container-description-image-width: 100%;
+  --hero-container-description-image-desktop-width: 320px;
+  --hero-container-description-image-height: auto;
+  --hero-container-description-image-margin-bottom: #{root.$spacing-sm};
+  --hero-container-description-image-border-radius: #{root.$border-radius-xs};
+  --hero-container-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  // Modifier
+  --hero-container-description-image-control-height: auto;
+  --hero-container-description-image-control-desktop-height: 240px;
+  --hero-container-description-image-control-width: 100%;
+  --hero-container-description-image-control-desktop-width: auto;
+  /* Bottom Links Container */
+  --hero-container-bottom-links-container-gap: #{root.$spacing-4xs};
+  --hero-container-bottom-links-container-padding: 0;
+  --hero-container-bottom-links-container-desktop-padding: #{0 root.$spacing-md};
+  --hero-container-bottom-links-container-margin-bottom: #{root.$spacing-md};
+
   &--container-dimension {
     .hero-container__media-container {
       flex-shrink: 0;
+      width: var(--hero-container-dimension-media-container-width);
+      height: var(--hero-container-dimension-media-container-height);
+      border-radius: var(
+        --hero-container-dimension-media-container-border-radius
+      );
       overflow: hidden;
-      border-radius: 8px;
-      width: 100%;
-      height: 240px;
 
       @include abs.breakpoint-up(lg) {
-        width: 35vw;
-        height: 360px;
+        width: var(--hero-container-dimension-media-container-desktop-width);
+        height: var(--hero-container-dimension-media-container-desktop-height);
       }
     }
     .hero-container__media {
-      width: 100%;
-      height: 100%;
+      width: var(--hero-container-dimension-media-width);
+      height: var(--hero-container-dimension-media-height);
       object-fit: cover;
     }
   }
 
   &__heading {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--hero-container-heading-margin-bottom);
     @include abs.typography-hero-heading;
   }
 
   &__teaser {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    justify-content: start;
+    gap: var(--hero-container-teaser-gap);
+    margin-bottom: var(--hero-container-teaser-margin-bottom);
+
     @include abs.breakpoint-up(lg) {
       flex-direction: row;
     }
   }
 
+  &__media {
+    background-color: transparent;
+  }
+
+  &__teaser-content {
+    flex: 1;
+    background-color: transparent;
+  }
+
   &__paragraphs-container {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--hero-container-paragraphs-container-margin-bottom);
   }
 
   &__paragraph {
     @include abs.typography-hero-teaser-paragraph;
 
     &:not(:last-child) {
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: var(--hero-container-paragraph-margin-bottom);
     }
   }
 
-  &__link {
+  &__links-container {
     display: flex;
-    align-items: center;
-    gap: 4px;
-    width: fit-content;
-    color: var(--accent-color);
-
-    &:hover {
-      .hero-container__arrow {
-        transform: translate(8px);
-      }
-    }
-  }
-
-  &__arrow {
-    transition: transform 0.35s ease-in-out;
+    flex-direction: column;
+    gap: var(--hero-container-links-container-gap);
   }
 
   &__descriptions-container {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--hero-container-descriptions-container-margin-bottom);
   }
 
   &__description {
     display: flex;
-    gap: 16px;
-    margin-bottom: var(--spacing-sm);
+    gap: var(--hero-container-description-gap);
+    margin-bottom: var(--hero-container-description-margin-bottom);
   }
 
   &__bullet-point {
     display: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-top: 12px;
     flex-shrink: 0;
-    border: 2px solid var(--accent-color);
-    // background-color: var(--accent-color);
+    width: var(--hero-container-bullet-point-width);
+    height: var(--hero-container-bullet-point-height);
+    margin-top: var(--hero-container-bullet-point-margin-top);
+    border: var(--hero-container-bullet-point-border);
+    border-radius: var(--hero-container-bullet-point-border-radius);
 
     @include abs.breakpoint-up(lg) {
       display: block;
@@ -93,41 +143,41 @@
   }
 
   &__description-text {
-    margin-bottom: 8px;
+    margin-bottom: var(--hero-container-description-text-margin-bottom);
     @include abs.typography-hero-description;
   }
 
   &__description-image {
-    height: auto;
-    width: 100%;
-    margin-top: var(--spacing-md);
-    border-radius: 4px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: var(--hero-container-description-image-width);
+    height: var(--hero-container-description-image-height);
+    margin-bottom: var(--hero-container-description-image-margin-bottom);
+    border-radius: var(--hero-container-description-image-border-radius);
+    box-shadow: var(--hero-container-description-image-box-shadow);
 
     @include abs.breakpoint-up(lg) {
-      width: 320px;
+      width: var(--hero-container-description-image-desktop-width);
     }
 
     &--control-height {
-      height: auto;
-      width: 100%;
+      width: var(--hero-container-description-image-control-width);
+      height: var(--hero-container-description-image-control-height);
 
       @include abs.breakpoint-up(lg) {
-        height: 320px;
-        width: auto;
+        width: var(--hero-container-description-image-control-desktop-width);
+        height: var(--hero-container-description-image-control-desktop-height);
       }
     }
   }
 
   &__bottom-links-container {
-    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4xs);
-    margin-bottom: var(--spacing-md);
+    gap: var(--hero-container-bottom-links-container-gap);
+    padding: var(--hero-container-bottom-links-container-padding);
+    margin-bottom: var(--hero-container-bottom-links-container-margin-bottom);
 
     @include abs.breakpoint-up(lg) {
-      padding: 0 var(--spacing-md);
+      padding: var(--hero-container-bottom-links-container-desktop-padding);
     }
   }
 }
