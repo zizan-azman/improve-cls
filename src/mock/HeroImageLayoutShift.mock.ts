@@ -43,7 +43,7 @@ export const HERO_IMAGE_LAYOUT_SHIFT_MOCK: HeroImageConfig = {
       {
         uniqueID: "0",
         imgConfig: {
-          controlHeight: true,
+          controlHeight: false,
           imgAlt: "Screenshot of img element with no size dimension",
           imgPath: layoutShift1,
           imgWidth: "1397",
