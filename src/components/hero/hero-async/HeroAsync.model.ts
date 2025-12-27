@@ -14,19 +14,26 @@ interface HeroAsyncTeaser {
 interface HeroAsyncContentEndDescriptionImage {
   imgAlt: string | undefined;
   imgPath: string | undefined;
-  showImage: boolean;
-  controlImgHeight: boolean;
+  imgWidth: string;
+  imgHeight: string;
+  controlHeight: boolean;
 }
 
 interface HeroAsyncContentEndDescriptionVideo {
   videoPath: string | undefined;
-  showVideo: boolean;
-  controlVideoHeight: boolean;
+  videoWidth: string;
+  videoHeight: string;
+  controlHeight: boolean;
+}
+interface HeroAsyncTextPart {
+  type: "bold" | "italic" | "code" | "bold-italic" | "normal";
+  text: string;
 }
 
 interface HeroAsyncContentEndDescription {
   uniqueID?: string;
-  text: string;
+  text?: string;
+  textParts?: (string | HeroAsyncTextPart)[];
   imgConfig?: HeroAsyncContentEndDescriptionImage;
   videoConfig?: HeroAsyncContentEndDescriptionVideo;
 }

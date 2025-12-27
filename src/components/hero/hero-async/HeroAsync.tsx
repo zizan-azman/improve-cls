@@ -1,11 +1,8 @@
 import { LinkArrow } from "@/components/link/link-arrow/LinkArrow";
 import type { HeroAsyncProps } from "./HeroAsync.model";
 import styles from "./HeroAsync.module.scss";
-import {
-  getHeroDescriptionImageClass,
-  getHeroDescriptionVideoClass,
-} from "./HeroAsync.utils";
 import { NewsModern } from "@/components/news/news-modern/NewsModern";
+import { getEmphasizeClass, getModifierClass } from "@/utils/GetClass.utils";
 
 export function HeroAsync({ config }: HeroAsyncProps) {
   const { heading, teaser, contentEnd } = config;
@@ -42,32 +39,43 @@ export function HeroAsync({ config }: HeroAsyncProps) {
               >
                 <div className={styles["hero-async__bullet-point"]}></div>
                 <div className="hero-async__description-content-wrapper">
-                  <div className={styles["hero-async__description-text"]}>
-                    {description.text}
-                  </div>
-                  {description.imgConfig?.showImage && (
+                  <p className={styles["hero-async__description-text"]}>
+                    {description.textParts?.map((part, index) => {
+                      if (typeof part === "string") return part;
+
+                      return (
+                        <span
+                          key={index}
+                          className={getEmphasizeClass(part.type)}
+                        >
+                          {part.text}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  {description?.imgConfig && (
                     <img
                       src={description.imgConfig.imgPath}
                       alt={description.imgConfig.imgAlt}
-                      width="240"
-                      height="80"
-                      className={getHeroDescriptionImageClass(
-                        description.imgConfig.controlImgHeight,
+                      width={description.imgConfig.imgWidth}
+                      height={description.imgConfig.imgHeight}
+                      className={getModifierClass(
+                        description.imgConfig.controlHeight,
                         styles["hero-async__description-image"],
                         styles["hero-async__description-image--control-height"]
                       )}
                     />
                   )}
-                  {description.videoConfig?.showVideo && (
+                  {description?.videoConfig && (
                     <video
                       src={description.videoConfig.videoPath}
-                      className={getHeroDescriptionVideoClass(
-                        description.videoConfig.controlVideoHeight,
+                      className={getModifierClass(
+                        description.videoConfig.controlHeight,
                         styles["hero-async__description-video"],
                         styles["hero-async__description-video--control-height"]
                       )}
-                      width="16"
-                      height="9"
+                      width={description.videoConfig.videoWidth}
+                      height={description.videoConfig.videoHeight}
                       autoPlay
                       loop
                       muted

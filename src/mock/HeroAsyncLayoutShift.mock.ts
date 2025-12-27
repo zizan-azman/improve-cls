@@ -48,47 +48,119 @@ export const HERO_ASYNC_LAYOUT_SHIFT_MOCK: HeroAsyncConfig = {
     descriptions: [
       {
         uniqueID: "0",
+        textParts: [
+          "In this example, we have a News Component that loads its data ",
+          { text: "asynchronously", type: "bold-italic" },
+          ". The data gets loaded after a ",
+          { text: "2-second delay", type: "bold" },
+          ".",
+        ],
         text: "In this example, we have a News Component that loads its data asynchronously. The data gets loaded after a 2-second delay.",
       },
       {
         uniqueID: "1",
+        textParts: [
+          "While the data is being fetched, ",
+          {
+            text: "no space is reserved",
+            type: "bold",
+          },
+          " for the ",
+          {
+            text: "incoming content",
+            type: "bold",
+          },
+          ". As a result, content below the News component initially ",
+          {
+            text: "renders at the top",
+            type: "bold",
+          },
+          " of the page.",
+        ],
         text: "While the data is being fetched, no space is reserved for the incoming News content. As a result, the content below the News component is initially rendered at the top of the page.",
         imgConfig: {
-          showImage: true,
-          controlImgHeight: true,
+          controlHeight: true,
           imgAlt: "Screenshot of News Component with no reserved space",
           imgPath: heroAsyncLayoutShift1,
+          imgWidth: "1011",
+          imgHeight: "328",
         },
       },
       {
         uniqueID: "2",
+        textParts: [
+          "Once the data loads, the News component appears and ",
+          {
+            text: "pushes the content below it downward",
+            type: "bold",
+          },
+          ", resulting in a noticeable ",
+          {
+            text: "layout shift",
+            type: "bold",
+          },
+          ".",
+        ],
         text: "Once the data finally loads, the News component appears and pushes the content beneath it downward, causing a noticeable layout shift.",
         videoConfig: {
-          controlVideoHeight: true,
-          showVideo: true,
+          controlHeight: true,
           videoPath: heroAsyncLayoutShift2,
+          videoWidth: "1920",
+          videoHeight: "1076",
         },
       },
       {
         uniqueID: "3",
+        textParts: [
+          "When we run the ",
+          {
+            text: "Lighthouse",
+            type: "bold-italic",
+          },
+          " report on this page, we get a ",
+          {
+            text: "poor",
+            type: "bold",
+          },
+          " ",
+          {
+            text: "CLS score",
+            type: "bold-italic",
+          },
+          ". This not only gives a ",
+          {
+            text: "poor user experience",
+            type: "bold",
+          },
+          ", but also ",
+          {
+            text: "negatively impacts ",
+            type: "bold",
+          },
+          {
+            text: "SEO",
+            type: "bold-italic",
+          },
+          ".",
+        ],
         text: "When we run the Lighthouse report on this page, we get a poor CLS score. This not only gives a poor user experience, but also negatively impacts SEO.",
         imgConfig: {
-          showImage: true,
-          controlImgHeight: false,
+          controlHeight: false,
           imgAlt:
             "Screenshot of poor CLS score caused by News component with layout shift",
           imgPath: heroAsyncLayoutShift3,
+          imgWidth: "213",
+          imgHeight: "78",
         },
       },
       {
         uniqueID: "4",
+        textParts: [
+          "To fix this layout shift and improve CLS score, ",
+          { text: "check out ", type: "bold" },
+          "the links below.",
+        ],
         text: "To fix this layout shift and improve CLS score, check out the links below.",
-        imgConfig: {
-          showImage: false,
-          controlImgHeight: false,
-          imgAlt: undefined,
-          imgPath: undefined,
-        },
       },
     ],
     links: [
