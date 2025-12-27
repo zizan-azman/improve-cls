@@ -76,50 +76,45 @@
 
 // News
 @mixin typography-news-date-day {
-  font-size: fn.px-to-rem(36px);
+  font-size: fn.px-to-rem(20px);
   font-weight: 700;
-  line-height: fn.px-to-rem(40px);
-
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
-  }
+  line-height: 1.25;
 }
 
 @mixin typography-news-date-month {
-  font-size: fn.px-to-rem(36px);
+  font-size: fn.px-to-rem(14px);
   font-weight: 700;
-  line-height: fn.px-to-rem(40px);
-
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
-  }
+  line-height: 1.28571;
 }
 
 @mixin typography-news-item-category {
-  font-size: fn.px-to-rem(36px);
+  font-size: fn.px-to-rem(14px);
   font-weight: 700;
-  line-height: fn.px-to-rem(40px);
-
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
-  }
+  line-height: 1.28571;
 }
 
 @mixin typography-news-item-body {
-  font-size: fn.px-to-rem(36px);
-  font-weight: 700;
-  line-height: fn.px-to-rem(40px);
+  font-size: fn.px-to-rem(16px);
+  font-weight: 300;
+  line-height: 1.5;
 
-  @include breakpoint-up(sm) {
-    font-size: fn.px-to-rem(48px);
-    line-height: 1;
+  @include breakpoint-up(lg) {
+    line-height: 1.375;
   }
 }
 
 @mixin typography-news-loading-text {
+  font-size: fn.px-to-rem(24px);
+  font-weight: 600;
+  line-height: 1.5;
+
+  @include breakpoint-up(lg) {
+    font-size: fn.px-to-rem(36px);
+    line-height: 1;
+  }
+}
+
+@mixin typography-news-empty-data {
   font-size: fn.px-to-rem(24px);
   font-weight: 600;
   line-height: 1.5;
