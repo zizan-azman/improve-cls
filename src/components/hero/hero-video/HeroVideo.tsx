@@ -1,10 +1,8 @@
 import styles from "./HeroVideo.module.scss";
 import { LinkArrow } from "@/components/link/link-arrow/LinkArrow";
 import type { HeroVideoProps } from "./HeroVideo.model";
-import {
-  getHeroDescriptionImageClass,
-  getHeroVideoClass,
-} from "./HeroVideo.utils";
+import { getHeroVideoClass } from "./HeroVideo.utils";
+import { getEmphasizeClass, getModifierClass } from "@/utils/GetClass.utils";
 
 export function HeroVideo({ config }: HeroVideoProps) {
   const { type, heading, teaser, contentEnd } = config;
@@ -57,17 +55,28 @@ export function HeroVideo({ config }: HeroVideoProps) {
               >
                 <div className={styles["hero-video__bullet-point"]}></div>
                 <div className="hero-video__description-content-wrapper">
-                  <div className={styles["hero-video__description-text"]}>
-                    {description.text}
-                  </div>
-                  {description.showImage && (
+                  <p className={styles["hero-video__description-text"]}>
+                    {description.textParts?.map((part, index) => {
+                      if (typeof part === "string") return part;
+
+                      return (
+                        <span
+                          key={index}
+                          className={getEmphasizeClass(part.type)}
+                        >
+                          {part.text}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  {description.imgConfig && (
                     <img
-                      src={description.imgPath}
-                      alt={description.imgAlt}
-                      width="240"
-                      height="80"
-                      className={getHeroDescriptionImageClass(
-                        description.controlImgHeight,
+                      src={description.imgConfig.imgPath}
+                      alt={description.imgConfig.imgAlt}
+                      width={description.imgConfig.imgWidth}
+                      height={description.imgConfig.imgHeight}
+                      className={getModifierClass(
+                        description.imgConfig.controlHeight,
                         styles["hero-video__description-image"],
                         styles["hero-video__description-image--control-height"]
                       )}

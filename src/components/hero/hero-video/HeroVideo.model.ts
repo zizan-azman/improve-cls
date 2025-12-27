@@ -13,13 +13,24 @@ interface HeroVideoTeaser {
   links: LinkArrowConfig[];
 }
 
+interface HeroVideoDescriptionImg {
+  imgAlt: string;
+  imgPath: string;
+  imgWidth: string;
+  imgHeight: string;
+  controlHeight: boolean;
+}
+
+interface HeroVideoTextPart {
+  type: "bold" | "italic" | "code" | "bold-italic" | "normal";
+  text: string;
+}
+
 interface HeroVideoContentEndDescription {
   uniqueID?: string;
-  text: string;
-  imgAlt: string | undefined;
-  imgPath: string | undefined;
-  showImage: boolean;
-  controlImgHeight: boolean;
+  text?: string;
+  textParts?: (string | HeroVideoTextPart)[];
+  imgConfig?: HeroVideoDescriptionImg;
 }
 
 interface HeroVideoContentEnd {
