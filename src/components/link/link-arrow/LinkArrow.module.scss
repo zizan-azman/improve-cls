@@ -3,21 +3,25 @@
 
 .link-arrow {
   --link-arrow-gap: #{root.$spacing-5xs};
+  --link-arrow-text-color: #{root.$accent-color};
+  --link-arrow-active-text-color: #{root.$accent-color};
+  --link-arrow-icon-transition: transform #{root.$transition};
+  --link-arrow-icon-hover-transform: translate(8px);
 
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: var(--link-arrow-gap);
   width: fit-content;
-  color: var(--accent-color);
+  color: var(--link-arrow-text-color);
 
   &:active,
   &:focus {
-    color: var(--accent-color);
+    color: var(--link-arrow-active-text-color);
   }
 
   &:hover {
     .link-arrow__icon {
-      transform: translate(8px);
+      transform: var(--link-arrow-icon-hover-transform);
     }
   }
 
@@ -26,6 +30,6 @@
   }
 
   &__icon {
-    transition: transform 0.35s ease-in-out;
+    transition: var(--link-arrow-icon-transition);
   }
 }
