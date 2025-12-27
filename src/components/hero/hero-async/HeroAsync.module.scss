@@ -2,10 +2,74 @@
 @use "@/styles/base/index-base" as root;
 
 .hero-async {
+  /* Modifier */
+  --hero-async-media-dimension-media-width: 100%;
+  --hero-async-media-dimension-media-desktop-width: 400px;
+  --hero-async-media-dimension-media-height: 100%;
+  --hero-async-media-dimension-media-border-radius: #{root.$border-radius-sm};
+  --hero-async-media-aspect-ratio: 16/9;
+  --hero-async-media-aspect-ratio-width: 100%;
+  --hero-async-media-aspect-ratio-desktop-width: 400px;
+  --hero-async-media-aspect-ratio-height: 100%;
+  --hero-async-media-aspect-ratio-border-radius: #{root.$border-radius-sm};
+  /* Heading */
+  --hero-async-heading-margin-bottom: #{root.$spacing-lg};
+  /* Teaser */
+  --hero-async-teaser-gap: #{root.$spacing-md};
+  --hero-async-teaser-margin-bottom: #{root.$spacing-md};
+  /* Paragraphs Container */
+  --hero-async-paragraphs-container-margin-bottom: #{root.$spacing-md};
+  /* Paragraph */
+  --hero-async-paragraph-margin-bottom: #{root.$spacing-sm};
+  /* Links Container */
+  --hero-async-links-container-gap: #{root.$spacing-4xs};
+  /* Descriptions Container */
+  --hero-async-descriptions-container-margin-bottom: #{root.$spacing-md};
+  /* Description */
+  --hero-async-description-gap: #{root.$spacing-xs};
+  --hero-async-description-margin-bottom: #{root.$spacing-2md};
+  /* Bullet Point */
+  --hero-async-bullet-point-width: 8px;
+  --hero-async-bullet-point-height: 8px;
+  --hero-async-bullet-point-margin-top: #{root.$spacing-2xs};
+  --hero-async-bullet-point-border: 2px solid #{root.$accent-color};
+  --hero-async-bullet-point-border-radius: 50%;
+  /* Description Text */
+  --hero-async-description-text-margin-bottom: #{root.$spacing-4xs};
+  /* Description Image */
+  --hero-async-description-image-width: 100%;
+  --hero-async-description-image-desktop-width: 320px;
+  --hero-async-description-image-height: auto;
+  --hero-async-description-image-margin-top: #{root.$spacing-xs};
+  --hero-async-description-image-border-radius: #{root.$border-radius-xs};
+  --hero-async-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  // Description Image Modifier
+  --hero-async-description-image-control-height: auto;
+  --hero-async-description-image-control-desktop-height: 240px;
+  --hero-async-description-image-control-width: 100%;
+  --hero-async-description-image-control-desktop-width: auto;
+  /* Description video */
+  --hero-async-description-video-width: 100%;
+  --hero-async-description-video-desktop-width: 320px;
+  --hero-async-description-video-height: auto;
+  --hero-async-description-video-margin-top: #{root.$spacing-xs};
+  --hero-async-description-video-border-radius: #{root.$border-radius-xs};
+  --hero-async-description-video-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  // Description Video Modifier
+  --hero-async-description-video-control-height: auto;
+  --hero-async-description-video-control-desktop-height: 300px;
+  --hero-async-description-video-control-width: 100%;
+  --hero-async-description-video-control-desktop-width: auto;
+  /* Bottom Links Container */
+  --hero-async-bottom-links-container-gap: #{root.$spacing-4xs};
+  --hero-async-bottom-links-container-padding: 0;
+  --hero-async-bottom-links-container-desktop-padding: #{0 root.$spacing-md};
+  --hero-async-bottom-links-container-margin-bottom: #{root.$spacing-md};
+
   background-color: transparent;
 
   &__heading {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--hero-async-heading-margin-bottom);
     @include abs.typography-hero-heading;
   }
 
@@ -13,8 +77,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    gap: var(--hero-async-teaser-gap);
+    margin-bottom: var(--hero-async-teaser-margin-bottom);
   }
 
   &__teaser-content {
@@ -23,41 +87,41 @@
   }
 
   &__paragraphs-container {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--hero-async-paragraphs-container-margin-bottom);
   }
 
   &__paragraph {
     @include abs.typography-hero-teaser-paragraph;
 
     &:not(:last-child) {
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: var(--hero-async-paragraph-margin-bottom);
     }
   }
 
   &__links-container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4xs);
+    gap: var(--hero-async-links-container-gap);
   }
 
   &__descriptions-container {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--hero-async-descriptions-container-margin-bottom);
   }
 
   &__description {
     display: flex;
-    gap: 16px;
-    margin-bottom: var(--spacing-sm);
+    gap: var(--hero-async-description-gap);
+    margin-bottom: var(--hero-async-description-margin-bottom);
   }
 
   &__bullet-point {
     display: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-top: 12px;
     flex-shrink: 0;
-    border: 2px solid var(--accent-color);
+    width: var(--hero-async-bullet-point-width);
+    height: var(--hero-async-bullet-point-height);
+    margin-top: var(--hero-async-bullet-point-margin-top);
+    border: var(--hero-async-bullet-point-border);
+    border-radius: var(--hero-async-bullet-point-border-radius);
 
     @include abs.breakpoint-up(lg) {
       display: block;
@@ -69,60 +133,58 @@
   }
 
   &__description-image {
-    height: auto;
-    width: 100%;
-    margin-top: 16px;
-    margin-bottom: var(--spacing-sm);
-    border-radius: 4px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: var(--hero-async-description-image-width);
+    height: var(--hero-async-description-image-height);
+    margin-top: var(--hero-async-description-image-margin-top);
+    border-radius: var(--hero-async-description-image-border-radius);
+    box-shadow: var(--hero-async-description-image-box-shadow);
 
     @include abs.breakpoint-up(lg) {
-      width: 320px;
+      width: var(--hero-async-description-image-desktop-width);
     }
 
     &--control-height {
-      height: auto;
-      width: 100%;
+      width: var(--hero-async-description-image-control-width);
+      height: var(--hero-async-description-image-control-height);
 
       @include abs.breakpoint-up(lg) {
-        height: 240px;
-        width: auto;
+        width: var(--hero-async-description-image-control-desktop-width);
+        height: var(--hero-async-description-image-control-desktop-height);
       }
     }
   }
 
   &__description-video {
-    height: auto;
-    width: 100%;
-    margin-top: 16px;
-    margin-bottom: var(--spacing-sm);
-    border-radius: 4px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: var(--hero-async-description-video-width);
+    height: var(--hero-async-description-video-height);
+    margin-top: var(--hero-async-description-video-margin-top);
+    border-radius: var(--hero-async-description-video-border-radius);
+    box-shadow: var(--hero-async-description-video-box-shadow);
 
     @include abs.breakpoint-up(lg) {
-      width: 320px;
+      width: var(--hero-async-description-video-desktop-width);
     }
 
     &--control-height {
-      height: auto;
-      width: 100%;
+      height: var(--hero-async-description-video-control-height);
+      width: var(--hero-async-description-video-control-width);
 
       @include abs.breakpoint-up(lg) {
-        height: 300px;
-        width: auto;
+        height: var(--hero-async-description-video-control-desktop-height);
+        width: var(--hero-async-description-video-control-desktop-width);
       }
     }
   }
 
   &__bottom-links-container {
-    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4xs);
-    margin-bottom: var(--spacing-md);
+    gap: var(--hero-async-bottom-links-container-gap);
+    padding: var(--hero-async-bottom-links-container-padding);
+    margin-bottom: var(--hero-async-bottom-links-container-margin-bottom);
 
     @include abs.breakpoint-up(lg) {
-      padding: 0 var(--spacing-md);
+      padding: var(--hero-async-bottom-links-container-desktop-padding);
     }
   }
 }

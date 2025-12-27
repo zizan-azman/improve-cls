@@ -37,6 +37,7 @@
   --spacing-sm: calc(#{var.$mapped-spacing-sm} * var(--spacing-scale));
   --spacing-md: calc(#{var.$mapped-spacing-md} * var(--spacing-scale));
   --spacing-2md: calc(#{var.$mapped-spacing-2md} * var(--spacing-scale));
+  --spacing-3md: calc(#{var.$mapped-spacing-3md} * var(--spacing-scale));
   --spacing-lg: calc(#{var.$mapped-spacing-lg} * var(--spacing-scale));
   --spacing-2lg: calc(#{var.$mapped-spacing-2lg} * var(--spacing-scale));
   --spacing-3lg: calc(#{var.$mapped-spacing-3lg} * var(--spacing-scale));
@@ -75,6 +76,7 @@ $spacing-xs: var(--spacing-xs);
 $spacing-sm: var(--spacing-sm);
 $spacing-md: var(--spacing-md);
 $spacing-2md: var(--spacing-2md);
+$spacing-3md: var(--spacing-3md);
 $spacing-lg: var(--spacing-lg);
 $spacing-2lg: var(--spacing-2lg);
 $spacing-3lg: var(--spacing-3lg);

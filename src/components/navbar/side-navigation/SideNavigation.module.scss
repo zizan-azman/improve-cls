@@ -62,7 +62,7 @@
   --side-navigation-links-container-expand-transform: translateY(0);
   /* Link */
   --side-navigation-link-padding: #{root.$spacing-3xs root.$spacing-xs
-    root.$spacing-3xs root.$spacing-2md};
+    root.$spacing-3xs root.$spacing-3md};
   --side-navigation-link-border-radius: #{root.$border-radius-xs};
   --side-navigation-link-hover-bg-color: #{root.$on-secondary-background-subtle-color};
   --side-navigation-link-active-text-color: #{root.$accent-minimal-color};
