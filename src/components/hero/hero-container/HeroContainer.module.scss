@@ -121,10 +121,13 @@
 
   &__bottom-links-container {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xs);
     margin-bottom: var(--spacing-md);
 
     @include abs.breakpoint-up(lg) {
-      padding: var(--spacing-md);
+      padding: 0 var(--spacing-md);
     }
   }
 }

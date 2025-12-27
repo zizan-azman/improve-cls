@@ -5,7 +5,7 @@
   background-color: transparent;
 
   &__heading {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
     @include abs.typography-hero-heading;
   }
 
