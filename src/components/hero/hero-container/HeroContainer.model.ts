@@ -18,6 +18,7 @@ interface HeroContainerDescriptionImg {
   imgPath: string;
   imgWidth: string;
   imgHeight: string;
+  controlHeight: boolean;
 }
 
 interface HeroContainerTextPart {

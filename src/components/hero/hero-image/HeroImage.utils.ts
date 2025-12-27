@@ -14,11 +14,3 @@ export function getHeroImageClass(
 
   return `${base}`;
 }
-
-export function getHeroDescriptionImageClass(
-  useHeight: boolean,
-  base: string,
-  modifier: string
-) {
-  return useHeight ? `${base} ${modifier}` : `${base}`;
-}

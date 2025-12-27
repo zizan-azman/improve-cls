@@ -44,54 +44,196 @@ export const HERO_IMAGE_ASPECT_RATIO_MOCK: HeroImageConfig = {
     descriptions: [
       {
         uniqueID: "0",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt:
-          "Screenshot of img element using CSS aspect-ratio inside a flex container",
-        imgPath: heroImageAspectRatio1,
-        text: "To reduce layout shifts, the img element is styled with width: 400px, height: 100%, aspect-ratio: 16/9 and flex-shrink: 0—where 400px can be replaced with any custom width. Setting flex-shrink: 0 prevents the image from shrinking its width as a side effect of being inside a flex container (row direction). The aspect-ratio property allows the browser to calculate the image's height in advance, ensuring the correct space is reserved before the image loads.",
+        imgConfig: {
+          controlHeight: false,
+          imgAlt:
+            "Screenshot of img element using CSS aspect-ratio inside a flex container",
+          imgPath: heroImageAspectRatio1,
+          imgWidth: "233",
+          imgHeight: "156",
+        },
+        textParts: [
+          "To reduce layout shifts, the ",
+          {
+            text: "img",
+            type: "bold-italic",
+          },
+          " element is styled with ",
+          {
+            text: "width: 400px",
+            type: "code",
+          },
+          ", ",
+          {
+            text: "height: 100%",
+            type: "code",
+          },
+          ", ",
+          {
+            text: "aspect-ratio: 16/9",
+            type: "code",
+          },
+          ", and ",
+          {
+            text: "flex-shrink: 0",
+            type: "code",
+          },
+          "—where ",
+          {
+            text: "400px",
+            type: "bold",
+          },
+          " can be replaced with any ",
+          {
+            text: "custom width",
+            type: "bold",
+          },
+          ". The ",
+          {
+            text: "aspect-ratio",
+            type: "bold-italic",
+          },
+          " property allows the browser to calculate the image's height ahead of time, while ",
+          {
+            text: "flex-shrink: 0",
+            type: "code",
+          },
+          " prevents the image from shrinking inside a flex container. Together, these styles ensure the correct space is reserved before the image loads.",
+        ],
+        text: "To reduce layout shifts, the img element is styled with width: 400px, height: 100%, aspect-ratio: 16/9, and flex-shrink: 0—where 400px can be replaced with any custom width. The aspect-ratio property allows the browser to calculate the image's height ahead of time, while flex-shrink: 0 prevents the image from shrinking inside a flex container. Together, these styles ensure the correct space is reserved before the image loads.",
       },
       {
         uniqueID: "1",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt:
-          "Screenshot of image original dimensions with the correct aspect-ratio",
-        imgPath: heroImageAspectRatio2,
-        text: "It's important to note that the aspect-ratio property must match your image's original aspect ratio. In this example, the image's original dimensions are width 1280px and height 720px. Therefore, aspect-ratio: 16/9 is the correct ratio to be used.",
+        imgConfig: {
+          controlHeight: false,
+          imgAlt:
+            "Screenshot of image original dimensions with the correct aspect-ratio",
+          imgPath: heroImageAspectRatio2,
+          imgWidth: "581",
+          imgHeight: "702",
+        },
+        textParts: [
+          "It's ",
+          {
+            text: "important",
+            type: "bold",
+          },
+          " to ensure that the ",
+          {
+            text: "aspect-ratio",
+            type: "bold-italic",
+          },
+          " property matches the ",
+          {
+            text: "image's original dimensions",
+            type: "bold",
+          },
+          ". In this example, the image has original dimensions of ",
+          {
+            text: "width 1280px",
+            type: "bold-italic",
+          },
+          " and ",
+          {
+            text: "height 720px",
+            type: "bold-italic",
+          },
+          ", which means the CSS ",
+          {
+            text: "aspect-ratio: 16/9",
+            type: "code",
+          },
+          " should be used.",
+        ],
+
+        text: "It's important to ensure that the aspect-ratio property matches the image's original dimensions. In this example, the image has original dimensions of width 1280px and height 720px, which means the CSS aspect-ratio: 16/9 should be used.",
       },
       {
         uniqueID: "2",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt:
-          "Screenshot of img element styled with aspect-ratio and flex-shrink set to zero",
-        imgPath: heroImageAspectRatio3,
-        text: "If the image's original aspect ratio is unknown, or if you intentionally use an aspect-ratio that is different from your image's ratio, you can apply object-fit: cover. This ensures the image fills the reserved space defined by the chosen aspect-ratio. Without object-fit, the image may appear stretched or squashed due to incorrect scaling.",
+        imgConfig: {
+          controlHeight: false,
+          imgAlt:
+            "Screenshot of img element styled with aspect-ratio and flex-shrink set to zero",
+          imgPath: heroImageAspectRatio3,
+          imgWidth: "574",
+          imgHeight: "257",
+        },
+        textParts: [
+          "If the image's ",
+          {
+            text: "original aspect ratio",
+            type: "bold",
+          },
+          " is unknown, or if you intentionally use an aspect ratio that differs from the image’s actual dimensions, applying ",
+          {
+            text: "object-fit: cover",
+            type: "code",
+          },
+          " ensures the image fills the reserved space correctly. Without it, the image may appear ",
+          {
+            text: "stretched",
+            type: "bold",
+          },
+          " or ",
+          {
+            text: "squashed",
+            type: "bold",
+          },
+          " due to ",
+          {
+            text: "incorrect scaling.",
+            type: "bold",
+          },
+        ],
+        text: "If the image's original aspect ratio is unknown, or if you intentionally use an aspect ratio that differs from the image’s actual dimensions, applying object-fit: cover ensures the image fills the reserved space correctly. Without it, the image may appear stretched or squashed due to incorrect scaling.",
       },
       {
         uniqueID: "3",
-        showImage: false,
-        controlImgHeight: true,
-        imgAlt: "Screenshot of img element with no size dimension",
-        imgPath: undefined,
+        textParts: [
+          "Keep in mind that using ",
+          {
+            text: "object-fit: cover",
+            type: "code",
+          },
+          " may crop parts of the image in order to fit the chosen aspect ratio, which can result in some content being ",
+          {
+            text: "clipped.",
+            type: "bold",
+          },
+        ],
         text: "Keep in mind that object-fit: cover will crop parts of your image to fit the aspect-ratio you used, which may result in some content being clipped.",
       },
       {
         uniqueID: "4",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt:
-          "Screenshot comparing aspect-ratio values with mismatched image proportions",
-        imgPath: heroImageAspectRatio4,
+        imgConfig: {
+          controlHeight: false,
+          imgAlt:
+            "Screenshot comparing aspect-ratio values with mismatched image proportions",
+          imgPath: heroImageAspectRatio4,
+          imgWidth: "2262",
+          imgHeight: "920",
+        },
+        textParts: [
+          "After applying the ",
+          {
+            text: "aspect-ratio",
+            type: "bold-italic",
+          },
+          " styles, we can see a significant ",
+          {
+            text: "improvement in the CLS score.",
+            type: "bold",
+          },
+        ],
         text: "After applying the aspect-ratio stylings, we now see a huge improvement in the CLS score.",
       },
       {
         uniqueID: "5",
-        showImage: false,
-        controlImgHeight: false,
-        imgAlt: undefined,
-        imgPath: undefined,
+        textParts: [
+          "To view other layout shift examples, ",
+          { text: "check out ", type: "bold" },
+          "the links below.",
+        ],
         text: "To view other layout shift examples, check out the links below.",
       },
     ],

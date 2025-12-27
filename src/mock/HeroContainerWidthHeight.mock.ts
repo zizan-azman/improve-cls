@@ -46,6 +46,7 @@ export const HERO_CONTAINER_WIDTH_HEIGHT_MOCK: HeroContainerConfig = {
           imgPath: widthHeight1,
           imgWidth: "347",
           imgHeight: "250",
+          controlHeight: false,
         },
         textParts: [
           "In this example, the ",
@@ -84,6 +85,7 @@ export const HERO_CONTAINER_WIDTH_HEIGHT_MOCK: HeroContainerConfig = {
           imgPath: widthHeight2,
           imgWidth: "211",
           imgHeight: "78",
+          controlHeight: false,
         },
         textParts: [
           "After ",
@@ -182,6 +184,7 @@ export const HERO_CONTAINER_WIDTH_HEIGHT_MOCK: HeroContainerConfig = {
           imgPath: widthHeight3,
           imgWidth: "241",
           imgHeight: "129",
+          controlHeight: false,
         },
         textParts: [
           "Additionally, it is recommended to ",

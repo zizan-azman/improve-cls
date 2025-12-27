@@ -81,6 +81,7 @@ export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
           imgPath: layoutShift1,
           imgWidth: "219",
           imgHeight: "78",
+          controlHeight: false,
         },
       },
       {
@@ -119,6 +120,7 @@ export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
           imgPath: layoutShift2,
           imgWidth: "436",
           imgHeight: "245",
+          controlHeight: false,
         },
         textParts: [
           "This happens because the ",
@@ -142,6 +144,7 @@ export const HERO_CONTAINER_LAYOUT_SHIFT_MOCK: HeroContainerConfig = {
           imgPath: layoutShift3,
           imgWidth: "337",
           imgHeight: "91",
+          controlHeight: false,
         },
         textParts: [
           "Additionally, the img element is inside a ",

@@ -3,7 +3,7 @@ import styles from "./HeroContainer.module.scss";
 import type { HeroContainerProps } from "./HeroContainer.model";
 import { getHeroContainerClass } from "./HeroContainer.utils";
 import { LinkArrow } from "@/components/link/link-arrow/LinkArrow";
-import { getEmphasizeClass } from "@/utils/GetClass.utils";
+import { getEmphasizeClass, getModifierClass } from "@/utils/GetClass.utils";
 
 export function HeroContainer({ config }: HeroContainerProps) {
   const { type, heading, teaser, contentEnd } = config;
@@ -68,7 +68,13 @@ export function HeroContainer({ config }: HeroContainerProps) {
                       alt={description.imgConfig.imgAlt}
                       width={description.imgConfig.imgWidth}
                       height={description.imgConfig.imgHeight}
-                      className={styles["hero-container__description-image"]}
+                      className={getModifierClass(
+                        description.imgConfig.controlHeight,
+                        styles["hero-container__description-image"],
+                        styles[
+                          "hero-container__description-image--control-height"
+                        ]
+                      )}
                     />
                   )}
                 </div>

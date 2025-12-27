@@ -100,12 +100,22 @@
   &__description-image {
     height: auto;
     width: 100%;
-    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
 
     @include abs.breakpoint-up(lg) {
       width: 320px;
+    }
+
+    &--control-height {
+      height: auto;
+      width: 100%;
+
+      @include abs.breakpoint-up(lg) {
+        height: 320px;
+        width: auto;
+      }
     }
   }
 

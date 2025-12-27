@@ -44,59 +44,256 @@ export const HERO_IMAGE_DIMENSION_MOCK: HeroImageConfig = {
     descriptions: [
       {
         uniqueID: "0",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt:
-          "Screenshot of img element using its original width and height as the attribute value",
-        imgPath: heroImageFix1,
+        imgConfig: {
+          controlHeight: false,
+          imgAlt: "",
+          imgPath: heroImageFix1,
+          imgWidth: "",
+          imgHeight: "",
+        },
+        textParts: [
+          "To reduce layout shifts, the ",
+          {
+            text: "img element",
+            type: "bold",
+          },
+          " is given ",
+          {
+            text: "explicit width and height attributes",
+            type: "bold",
+          },
+          " that match the ",
+          {
+            text: "image's original dimensions",
+            type: "bold",
+          },
+          ". This ",
+          {
+            text: "allows the browser to calculate the correct aspect ratio",
+            type: "bold",
+          },
+          " and ",
+          {
+            text: "reserve the required space",
+            type: "bold",
+          },
+          " before the image loads, helping to maintain a ",
+          {
+            text: "stable",
+            type: "bold",
+          },
+          " layout.",
+        ],
         text: "To reduce layout shifts, the img element is given explicit width and height attributes that match the image's original dimensions. This allows the browser to calculate the correct aspect ratio and reserve the required space before the image loads, helping to maintain a stable layout.",
       },
       {
         uniqueID: "1",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt: "Screenshot of img element with width and height stylings",
-        imgPath: heroImageFix2,
+        imgConfig: {
+          controlHeight: false,
+          imgAlt: "Screenshot of img element with width and height stylings",
+          imgPath: heroImageFix2,
+          imgWidth: "",
+          imgHeight: "",
+        },
+        textParts: [
+          "In addition, the image is styled with ",
+          {
+            text: "width: 400px",
+            type: "code",
+          },
+          ", ",
+          {
+            text: "height: 100%",
+            type: "code",
+          },
+          ", and ",
+          {
+            text: "flex-shrink: 0",
+            type: "code",
+          },
+          "—where 400px can be replaced with any ",
+          {
+            text: "custom width",
+            type: "bold",
+          },
+          ". Setting ",
+          {
+            text: "flex-shrink: 0",
+            type: "code",
+          },
+          " prevents the image from shrinking its width as a side effect of being inside a flex container (row direction). When combined with the width and height attributes, these styles ensure the ",
+          {
+            text: "image scales correctly within its parent container",
+            type: "bold",
+          },
+          " and ",
+          {
+            text: "avoids layout shifts.",
+            type: "bold",
+          },
+        ],
         text: "In addition, the image is styled with width: 400px, height: 100%, and flex-shrink: 0—where 400px can be replaced with any custom width. Setting flex-shrink: 0 prevents the image from shrinking its width as a side effect of being inside a flex container (row direction). When combined with the width and height attributes, these styles ensure the image scales correctly within its parent container and avoids layout shifts.",
       },
       {
         uniqueID: "2",
-        showImage: false,
-        controlImgHeight: true,
-        imgAlt: "Screenshot of img element with no size dimension",
-        imgPath: undefined,
-        text: "This approach is a recommended best practice for preventing layout shifts caused by img or video element inside of a flex container.",
-      },
-      {
-        uniqueID: "3",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt: "Screenshot of img element with no size dimension",
-        imgPath: heroImageFix4,
+        imgConfig: {
+          controlHeight: false,
+          imgAlt: "Screenshot of img element with no size dimension",
+          imgPath: heroImageFix4,
+          imgWidth: "",
+          imgHeight: "",
+        },
+        textParts: [
+          "After ",
+          {
+            text: "defining explicit dimensions",
+            type: "bold",
+          },
+          " on the ",
+          {
+            text: "img",
+            type: "bold-italic",
+          },
+          ", we now see a ",
+          {
+            text: "huge improvement",
+            type: "bold",
+          },
+          " in the ",
+          {
+            text: "CLS score.",
+            type: "bold-italic",
+          },
+        ],
+
         text: "After defining explicit dimensions on the img, we now see a huge improvement in the CLS score.",
       },
       {
-        uniqueID: "4",
-        showImage: true,
-        controlImgHeight: false,
-        imgAlt: "Screenshot of img element with no size dimension",
-        imgPath: heroImageFix3,
+        uniqueID: "3",
+        imgConfig: {
+          controlHeight: false,
+          imgAlt: "Screenshot of img element with no size dimension",
+          imgPath: heroImageFix3,
+          imgWidth: "",
+          imgHeight: "",
+        },
+        textParts: [
+          "Note that for ",
+          {
+            text: "img",
+            type: "bold-italic",
+          },
+          " or ",
+          {
+            text: "video element",
+            type: "bold-italic",
+          },
+          " inside of a ",
+          {
+            text: "flex container",
+            type: "bold-italic",
+          },
+          ", you'll need to use the ",
+          {
+            text: "original width",
+            type: "bold",
+          },
+          " and ",
+          {
+            text: "height dimensions",
+            type: "bold",
+          },
+          " in order to achieve 0 layout shifts. If you use a ",
+          {
+            text: "dummy value",
+            type: "bold-italic",
+          },
+          " for the ",
+          {
+            text: "width",
+            type: "bold-italic",
+          },
+          " and ",
+          {
+            text: "height attributes",
+            type: "bold-italic",
+          },
+          ", there will be some layout shifts. To achieve 0 layout shifts using a dummy width and height attribute, it is recommended to ",
+          {
+            text: "change the flex parent container",
+            type: "bold-italic",
+          },
+          " to a ",
+          {
+            text: "grid container",
+            type: "bold-italic",
+          },
+          ". This is because ",
+          {
+            text: "grid layouts",
+            type: "bold-italic",
+          },
+          " can ",
+          {
+            text: "reserve space",
+            type: "bold",
+          },
+          " more ",
+          {
+            text: "predictably",
+            type: "bold",
+          },
+          " using units such as ",
+          {
+            text: "fr.",
+            type: "bold-italic",
+          },
+        ],
         text: "Note that for img or video element inside of a flex container, you'll need to use the original width and height dimensions in order to achieve 0 layout shifts. If you use a dummy value for the width and height attributes, there will be some layout shifts. To achive 0 layout shifts using a dummy width and height attribute, it is recommended to change the flex parent container to a grid container. This is because grid layouts can reserve space more predictably using units such as fr.",
       },
       {
-        uniqueID: "5",
-        showImage: false,
-        controlImgHeight: false,
-        imgAlt: undefined,
-        imgPath: undefined,
-        text: "It is also very important to avoid using Javascript to calculate the width and height of a media element such as img and video. Using Javascript will definitely cause layout shifts.",
+        uniqueID: "4",
+        textParts: [
+          "It is ",
+          {
+            text: "important",
+            type: "bold",
+          },
+          " to avoid using ",
+          {
+            text: "JavaScript",
+            type: "bold-italic",
+          },
+          " to calculate the ",
+          {
+            text: "width and height",
+            type: "bold",
+          },
+          " of media elements such as ",
+          {
+            text: "img",
+            type: "bold-italic",
+          },
+          " and ",
+          {
+            text: "video",
+            type: "bold-italic",
+          },
+          ". Because these values are applied after the initial layout is rendered, they can introduce late layout changes and result in ",
+          {
+            text: "layout shifts.",
+            type: "bold",
+          },
+        ],
+        text: "It is important to avoid using JavaScript to calculate the width and height of media elements such as img and video. Because these values are applied after the initial layout is rendered, they can introduce late layout changes and result in layout shifts.",
       },
       {
-        uniqueID: "6",
-        showImage: false,
-        controlImgHeight: false,
-        imgAlt: undefined,
-        imgPath: undefined,
+        uniqueID: "5",
+        textParts: [
+          "To view other layout shift examples, ",
+          { text: "check out ", type: "bold" },
+          "the links below.",
+        ],
         text: "To view other layout shift examples, check out the links below.",
       },
     ],

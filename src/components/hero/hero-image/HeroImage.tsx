@@ -1,10 +1,8 @@
 import type { HeroImageProps } from "./HeroImage.model";
-import {
-  getHeroDescriptionImageClass,
-  getHeroImageClass,
-} from "./HeroImage.utils";
+import { getHeroImageClass } from "./HeroImage.utils";
 import styles from "./HeroImage.module.scss";
 import { LinkArrow } from "@/components/link/link-arrow/LinkArrow";
+import { getEmphasizeClass, getModifierClass } from "@/utils/GetClass.utils";
 
 export function HeroImage({ config }: HeroImageProps) {
   const { type, heading, teaser, contentEnd } = config;
@@ -54,17 +52,28 @@ export function HeroImage({ config }: HeroImageProps) {
               >
                 <div className={styles["hero-image__bullet-point"]}></div>
                 <div className="hero-image__description-content-wrapper">
-                  <div className={styles["hero-image__description-text"]}>
-                    {description.text}
-                  </div>
-                  {description.showImage && (
+                  <p className={styles["hero-image__description-text"]}>
+                    {description.textParts?.map((part, index) => {
+                      if (typeof part === "string") return part;
+
+                      return (
+                        <span
+                          key={index}
+                          className={getEmphasizeClass(part.type)}
+                        >
+                          {part.text}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  {description.imgConfig && (
                     <img
-                      src={description.imgPath}
-                      alt={description.imgAlt}
-                      width="240"
-                      height="80"
-                      className={getHeroDescriptionImageClass(
-                        description.controlImgHeight,
+                      src={description.imgConfig.imgPath}
+                      alt={description.imgConfig.imgAlt}
+                      width={description.imgConfig.imgWidth}
+                      height={description.imgConfig.imgHeight}
+                      className={getModifierClass(
+                        description.imgConfig.controlHeight,
                         styles["hero-image__description-image"],
                         styles["hero-image__description-image--control-height"]
                       )}
