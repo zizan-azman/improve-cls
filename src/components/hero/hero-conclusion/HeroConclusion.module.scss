@@ -2,10 +2,40 @@
 @use "@/styles/base/index-base" as root;
 
 .hero-conclusion {
+  /* Heading */
+  --hero-conclusion-heading-margin-bottom: #{root.$spacing-lg};
+  /* Description Item */
+  --hero-conclusion-description-item-margin-bottom: #{root.$spacing-md};
+  --hero-conclusion-description-item-last-margin-bottom: 0;
+  /* Description Image */
+  --hero-conclusion-description-image-width: 100%;
+  --hero-conclusion-description-image-desktop-width: 320px;
+  --hero-conclusion-description-image-height: auto;
+  --hero-conclusion-description-image-margin-top: #{root.$spacing-md};
+  --hero-conclusion-description-image-border-radius: #{root.$border-radius-xs};
+  --hero-conclusion-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  // Description Image Modifier
+  --hero-conclusion-description-image-control-height: auto;
+  --hero-conclusion-description-image-control-desktop-height: 320px;
+  --hero-conclusion-description-image-control-width: 100%;
+  --hero-conclusion-description-image-control-desktop-width: auto;
+  /* Description video */
+  --hero-conclusion-description-video-width: 100%;
+  --hero-conclusion-description-video-desktop-width: 320px;
+  --hero-conclusion-description-video-height: auto;
+  --hero-conclusion-description-video-margin-top: #{root.$spacing-md};
+  --hero-conclusion-description-video-border-radius: #{root.$border-radius-xs};
+  --hero-conclusion-description-video-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  // Description Video Modifier
+  --hero-conclusion-description-video-control-height: auto;
+  --hero-conclusion-description-video-control-desktop-height: 320px;
+  --hero-conclusion-description-video-control-width: 100%;
+  --hero-conclusion-description-video-control-desktop-width: auto;
+
   background-color: transparent;
 
   &__heading {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--hero-conclusion-heading-margin-bottom);
     @include abs.typography-hero-heading;
   }
 
@@ -15,10 +45,10 @@
 
   &__description-item {
     background-color: transparent;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--hero-conclusion-description-item-margin-bottom);
 
     &:last-of-type {
-      margin-bottom: 0;
+      margin-bottom: var(--hero-conclusion-description-item-last-margin-bottom);
     }
   }
 
@@ -27,45 +57,45 @@
   }
 
   &__description-image {
-    height: auto;
-    width: 100%;
-    margin-top: var(--spacing-md);
-    border-radius: 4px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: var(--hero-conclusion-description-image-width);
+    height: var(--hero-conclusion-description-image-height);
+    margin-top: var(--hero-conclusion-description-image-margin-top);
+    border-radius: var(--hero-conclusion-description-image-border-radius);
+    box-shadow: var(--hero-conclusion-description-image-box-shadow);
 
     @include abs.breakpoint-up(lg) {
-      width: 320px;
+      width: var(--hero-conclusion-description-image-desktop-width);
     }
 
     &--control-height {
-      height: auto;
-      width: 100%;
+      height: var(--hero-conclusion-description-image-control-height);
+      width: var(--hero-conclusion-description-image-control-width);
 
       @include abs.breakpoint-up(lg) {
-        height: 320px;
-        width: auto;
+        height: var(--hero-conclusion-description-image-control-desktop-height);
+        width: var(--hero-conclusion-description-image-control-desktop-width);
       }
     }
   }
 
   &__description-video {
-    height: auto;
-    width: 100%;
-    margin-top: var(--spacing-md);
-    border-radius: 4px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: var(--hero-conclusion-description-video-width);
+    height: var(--hero-conclusion-description-video-height);
+    margin-top: var(--hero-conclusion-description-video-margin-top);
+    border-radius: var(--hero-conclusion-description-video-border-radius);
+    box-shadow: var(--hero-conclusion-description-video-box-shadow);
 
     @include abs.breakpoint-up(lg) {
-      width: 320px;
+      width: var(--hero-conclusion-description-video-desktop-width);
     }
 
     &--control-height {
-      height: auto;
-      width: 100%;
+      width: var(--hero-conclusion-description-video-control-width);
+      height: var(--hero-conclusion-description-video-control-height);
 
       @include abs.breakpoint-up(lg) {
-        height: 320px;
-        width: auto;
+        width: var(--hero-conclusion-description-video-control-desktop-width);
+        height: var(--hero-conclusion-description-video-control-desktop-height);
       }
     }
   }
