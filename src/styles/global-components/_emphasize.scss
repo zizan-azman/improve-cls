@@ -2,7 +2,7 @@
 @use "@/styles/base/index-base" as root;
 
 .emphasize {
-  --emphasize-code-padding: #{root.$spacing-4xs root.$spacing-3xs};
+  --emphasize-code-padding: #{root.$spacing-5xs root.$spacing-4xs};
   --emphasize-code-background-color: #{root.$background-subtle-color};
   --emphasize-code-border-radius: #{root.$border-radius-sm};
 

@@ -2,26 +2,86 @@
 @use "@/styles/base/index-base" as root;
 
 .side-navigation {
-  --side-navigation-bg-color: #{root.$secondary-color};
-  --side-navigation-mobile-bg-color: #{root.$background-color};
+  /* Self */
+  --side-navigation-height: 60px;
   --side-navigation-padding: 0 #{root.$spacing-md};
-  --side-navigation-logo-text-color: #{root.$on-accent-text-color};
+  --side-navigation-desktop-padding: 0;
+  --side-navigation-bg-color: #{root.$background-color};
+  --side-navigation-desktop-bg-color: #{root.$secondary-color};
+  --side-navigation-border-bottom: 1px solid #{root.$stroke-subtle-color};
+  /* Backdrop */
+  --side-navigation-backdrop-bg-color: rgba(0, 0, 0, 0.4);
+  --side-navigation-backdrop-transition: opacity #{root.$transition};
+  /* Drawer */
+  --side-navigation-drawer-width: 280px;
+  --side-navigation-drawer-height: 100vh;
+  --side-navigation-drawer-padding: #{root.$spacing-md root.$spacing-xs};
+  --side-navigation-drawer-text-color: #{root.$on-accent-text-color};
+  --side-navigation-drawer-bg-color: #{root.$secondary-color};
+  --side-navigation-drawer-desktop-bg-color: transparent;
+  --side-navigation-drawer-transform: translateX(-100%);
+  --side-navigation-drawer-desktop-transform: none;
+  --side-navigation-drawer-transition: transform #{root.$transition};
+  --side-navigation-drawer-desktop-transition: none;
+  // Modifier
+  --side-navigation-drawer-open-transform: translateX(0);
+  /* Logo */
+  --side-navigation-logo-gap: #{root.$spacing-xs};
+  --side-navigation-logo-margin-bottom: #{root.$spacing-lg};
+  --side-navigation-logo-icon-color: #{root.$accent-color};
+  /* Groups Container */
+  --side-navigation-groups-container-gap: #{root.$spacing-xs};
+  /* Group Button */
+  --side-navigation-group-button-width: 100%;
+  --side-navigation-group-button-padding: #{root.$spacing-3xs root.$spacing-xs};
+  --side-navigation-group-button-border-radius: #{root.$border-radius-xs};
+  --side-navigation-group-button-transition: background-color #{root.$transition};
+  --side-navigation-group-button-hover-bg-color: #{root.$on-secondary-background-subtle-color};
+  --side-navigation-group-button-is-active-bg-color: #{root.$on-secondary-background-subtle-color};
+  --side-navigation-group-button-expand-transform: rotate(90deg);
+  /* Group Button Solo */
+  --side-navigation-group-button-solo-width: 100%;
+  --side-navigation-group-button-solo-padding: #{root.$spacing-3xs
+    root.$spacing-xs};
+  --side-navigation-group-button-solo-border-radius: #{root.$border-radius-xs};
+  --side-navigation-group-button-solo-transition: background-color #{root.$transition};
+  --side-navigation-group-button-solo-hover-bg-color: #{root.$on-secondary-background-subtle-color};
+  --side-navigation-group-button-solo-is-active-bg-color: #{root.$on-secondary-background-subtle-color};
+  /* Group Logo Text */
+  --side-navigation-group-logo-text-gap: #{root.$spacing-xs};
+  /* Group Text */
+  --side-navigation-group-text-margin-top: #{root.$spacing-6xs};
+  /* Group Arrow */
+  --side-navigation-group-arrow-transition: transform #{root.$transition};
+  /* Links Container */
+  --side-navigation-links-container-gap: #{root.$spacing-4xs};
+  --side-navigation-links-container-transform: translateY(-4px);
+  --side-navigation-links-container-transition: height #{root.$transition},
+    opacity #{root.$transition}, transform #{root.$transition};
+  --side-navigation-links-container-expand-padding: #{root.$spacing-3xs 0};
+  --side-navigation-links-container-expand-transform: translateY(0);
+  /* Link */
+  --side-navigation-link-padding: #{root.$spacing-3xs root.$spacing-xs
+    root.$spacing-3xs root.$spacing-2md};
+  --side-navigation-link-border-radius: #{root.$border-radius-xs};
+  --side-navigation-link-hover-bg-color: #{root.$on-secondary-background-subtle-color};
+  --side-navigation-link-active-text-color: #{root.$accent-minimal-color};
 
-  display: flex;
-  height: 60px;
-  padding: var(--side-navigation-padding);
-  background-color: var(--side-navigation-mobile-bg-color);
-  border-bottom: 1px solid var(--stroke-subtle-color);
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  height: var(--side-navigation-height);
+  padding: var(--side-navigation-padding);
+  background-color: var(--side-navigation-bg-color);
+  border-bottom: var(--side-navigation-border-bottom);
 
   @include abs.breakpoint-up(lg) {
-    height: auto;
-    border-bottom: none;
-    background-color: var(--side-navigation-bg-color);
-    padding: 0;
     position: relative;
+    height: auto;
+    padding: var(--side-navigation-desktop-padding);
+    border-bottom: none;
+    background-color: var(--side-navigation-desktop-bg-color);
   }
 
   &__hamburger-button {
@@ -33,10 +93,10 @@
   &__backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
     opacity: 0;
+    background-color: var(--side-navigation-backdrop-bg-color);
+    transition: var(--side-navigation-backdrop-transition);
     pointer-events: none;
-    transition: opacity 0.3s ease;
 
     &--visible {
       opacity: 1;
@@ -49,27 +109,27 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
-    height: 100vh;
-    background-color: var(--accent-bold-color);
-    color: var(--on-accent-text-color);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    width: var(--side-navigation-drawer-width);
+    height: var(--side-navigation-drawer-height);
+    padding: var(--side-navigation-drawer-padding);
+    color: var(--side-navigation-drawer-text-color);
+    background-color: var(--side-navigation-drawer-bg-color);
+    transform: var(--side-navigation-drawer-transform);
+    transition: var(--side-navigation-drawer-transition);
     will-change: transform;
-    padding: 32px 16px;
 
     @include abs.breakpoint-up(lg) {
       position: sticky; /* or static */
       top: 0;
-      transform: none;
-      transition: none;
-      height: 100vh;
       flex-shrink: 0;
-      background-color: transparent;
+      height: var(--side-navigation-drawer-height);
+      transform: var(--side-navigation-drawer-desktop-transform);
+      transition: var(--side-navigation-drawer-desktop-transition);
+      background-color: var(--side-navigation-drawer-desktop-bg-color);
     }
 
     &--open {
-      transform: translateX(0);
+      transform: var(--side-navigation-drawer-open-transform);
     }
   }
 
@@ -77,12 +137,12 @@
   &__logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    margin-bottom: 60px;
+    gap: var(--side-navigation-logo-gap);
+    margin-bottom: var(--side-navigation-logo-margin-bottom);
   }
 
   &__logo-icon {
-    color: var(--accent-color);
+    color: var(--side-navigation-logo-icon-color);
   }
 
   &__logo-text {
@@ -93,7 +153,7 @@
   &__groups-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--side-navigation-groups-container-gap);
   }
 
   &__group-item {
@@ -101,93 +161,95 @@
   }
 
   &__group-button {
-    padding: 10px 16px;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 4px;
-    transition: background-color 0.35s ease-in-out;
+    width: var(--side-navigation-group-button-width);
+    padding: var(--side-navigation-group-button-padding);
+    border-radius: var(--side-navigation-group-button-border-radius);
+    transition: var(--side-navigation-group-button-transition);
 
     &:hover {
-      background-color: var(--on-secondary-background-subtle-color);
+      background-color: var(--side-navigation-group-button-hover-bg-color);
     }
 
     &:has(+ .side-navigation__links-container .side-navigation__link--active) {
-      background-color: var(--on-secondary-background-subtle-color);
+      background-color: var(--side-navigation-group-button-is-active-bg-color);
     }
 
     &--expand {
       .side-navigation__group-arrow {
-        transform: rotate(90deg);
+        transform: var(--side-navigation-group-button-expand-transform);
       }
     }
   }
 
   &__group-button-solo {
-    padding: 10px 16px;
-    width: 100%;
     display: flex;
     align-items: center;
-    border-radius: 4px;
-    transition: background-color 0.35s ease-in-out;
+    width: var(--side-navigation-group-button-solo-width);
+    padding: var(--side-navigation-group-button-solo-padding);
+    border-radius: var(--side-navigation-group-button-solo-border-radius);
+    transition: var(--side-navigation-group-button-solo-transition);
 
     &:hover {
-      background-color: var(--on-secondary-background-subtle-color);
+      background-color: var(--side-navigation-group-button-solo-hover-bg-color);
     }
 
     &--active {
-      background-color: var(--on-secondary-background-subtle-color);
+      background-color: var(
+        --side-navigation-group-button-solo-is-active-bg-color
+      );
     }
   }
 
   &__group-logo-text {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--side-navigation-group-logo-text-gap);
   }
 
   &__group-text {
-    margin-top: 2px;
+    margin-top: var(--side-navigation-group-text-margin-top);
   }
 
   &__group-arrow {
-    transition: transform 0.25s ease;
+    transition: var(--side-navigation-group-arrow-transition);
   }
 
   /* Links */
   &__links-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    overflow: hidden;
+    gap: var(--side-navigation-links-container-gap);
     height: 0;
     opacity: 0;
-    transform: translateY(-4px);
-    transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    transform: var(--side-navigation-links-container-transform);
+    transition: var(--side-navigation-links-container-transition);
+    overflow: hidden;
 
     &--expand {
-      padding: 10px 0;
-      height: auto; // must be larger than the content height
+      height: auto;
+      padding: var(--side-navigation-links-container-expand-padding);
       opacity: 1;
-      transform: translateY(0);
+      transform: var(--side-navigation-links-container-expand-transform);
     }
   }
 
   &__link {
-    @include abs.typography-navigation-link;
-    padding: 10px 16px 10px 56px;
-    border-radius: 4px;
     display: block;
+    padding: var(--side-navigation-link-padding);
+    border-radius: var(--side-navigation-link-border-radius);
+    @include abs.typography-navigation-link;
 
     &:hover {
-      background-color: var(--on-secondary-background-subtle-color);
+      background-color: var(--side-navigation-link-hover-bg-color);
     }
 
     &--active,
     &--active:focus,
     &--active:active {
-      color: var(--accent-minimal-color);
+      color: var(--side-navigation-link-active-text-color);
     }
   }
 }

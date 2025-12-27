@@ -28,16 +28,20 @@
     #{var.$mapped-border-radius-full} * var(--border-radius-scale)
   );
   --spacing-scale: 1;
+  --spacing-6xs: calc(#{var.$mapped-spacing-6xs} * var(--spacing-scale));
+  --spacing-5xs: calc(#{var.$mapped-spacing-5xs} * var(--spacing-scale));
   --spacing-4xs: calc(#{var.$mapped-spacing-4xs} * var(--spacing-scale));
   --spacing-3xs: calc(#{var.$mapped-spacing-3xs} * var(--spacing-scale));
   --spacing-2xs: calc(#{var.$mapped-spacing-2xs} * var(--spacing-scale));
   --spacing-xs: calc(#{var.$mapped-spacing-xs} * var(--spacing-scale));
   --spacing-sm: calc(#{var.$mapped-spacing-sm} * var(--spacing-scale));
   --spacing-md: calc(#{var.$mapped-spacing-md} * var(--spacing-scale));
+  --spacing-2md: calc(#{var.$mapped-spacing-2md} * var(--spacing-scale));
   --spacing-lg: calc(#{var.$mapped-spacing-lg} * var(--spacing-scale));
   --spacing-2lg: calc(#{var.$mapped-spacing-2lg} * var(--spacing-scale));
   --spacing-3lg: calc(#{var.$mapped-spacing-3lg} * var(--spacing-scale));
   --spacing-xl: calc(#{var.$mapped-spacing-xl} * var(--spacing-scale));
+  --transition: 0.3s ease-in-out;
   --font-family: "Nunito";
 }
 
@@ -62,14 +66,18 @@ $border-radius-sm: var(--border-radius-sm);
 $border-radius-md: var(--border-radius-md);
 $border-radius-full: var(--border-radius-full);
 $spacing-scale: var(--spacing-scale);
+$spacing-6xs: var(--spacing-6xs);
+$spacing-5xs: var(--spacing-5xs);
 $spacing-4xs: var(--spacing-4xs);
 $spacing-3xs: var(--spacing-3xs);
 $spacing-2xs: var(--spacing-2xs);
 $spacing-xs: var(--spacing-xs);
 $spacing-sm: var(--spacing-sm);
 $spacing-md: var(--spacing-md);
+$spacing-2md: var(--spacing-2md);
 $spacing-lg: var(--spacing-lg);
 $spacing-2lg: var(--spacing-2lg);
 $spacing-3lg: var(--spacing-3lg);
 $spacing-xl: var(--spacing-xl);
+$transition: var(--transition);
 $font-family: var(--font-family);

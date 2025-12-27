@@ -2,7 +2,7 @@
 @use "@/styles/base/index-base" as root;
 
 .link-arrow {
-  --link-arrow-gap: #{root.$spacing-4xs};
+  --link-arrow-gap: #{root.$spacing-5xs};
 
   display: flex;
   align-items: center;
