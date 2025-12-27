@@ -25,7 +25,7 @@
   --hero-container-descriptions-container-margin-bottom: #{root.$spacing-md};
   /* Description */
   --hero-container-description-gap: #{root.$spacing-xs};
-  --hero-container-description-margin-bottom: #{root.$spacing-sm};
+  --hero-container-description-margin-bottom: #{root.$spacing-2md};
   /* Bullet Point */
   --hero-container-bullet-point-width: 8px;
   --hero-container-bullet-point-height: 8px;
@@ -38,7 +38,7 @@
   --hero-container-description-image-width: 100%;
   --hero-container-description-image-desktop-width: 320px;
   --hero-container-description-image-height: auto;
-  --hero-container-description-image-margin-bottom: #{root.$spacing-sm};
+  --hero-container-description-image-margin-top: #{root.$spacing-xs};
   --hero-container-description-image-border-radius: #{root.$border-radius-xs};
   --hero-container-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Modifier
@@ -143,14 +143,13 @@
   }
 
   &__description-text {
-    margin-bottom: var(--hero-container-description-text-margin-bottom);
     @include abs.typography-hero-description;
   }
 
   &__description-image {
     width: var(--hero-container-description-image-width);
     height: var(--hero-container-description-image-height);
-    margin-bottom: var(--hero-container-description-image-margin-bottom);
+    margin-top: var(--hero-container-description-image-margin-top);
     border-radius: var(--hero-container-description-image-border-radius);
     box-shadow: var(--hero-container-description-image-box-shadow);
 

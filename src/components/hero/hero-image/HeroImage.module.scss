@@ -27,7 +27,7 @@
   --hero-image-descriptions-container-margin-bottom: #{root.$spacing-md};
   /* Description */
   --hero-image-description-gap: #{root.$spacing-xs};
-  --hero-image-description-margin-bottom: #{root.$spacing-sm};
+  --hero-image-description-margin-bottom: #{root.$spacing-2md};
   /* Bullet Point */
   --hero-image-bullet-point-width: 8px;
   --hero-image-bullet-point-height: 8px;
@@ -40,7 +40,7 @@
   --hero-image-description-image-width: 100%;
   --hero-image-description-image-desktop-width: 320px;
   --hero-image-description-image-height: auto;
-  --hero-image-description-image-margin-bottom: #{root.$spacing-sm};
+  --hero-image-description-image-margin-top: #{root.$spacing-xs};
   --hero-image-description-image-border-radius: #{root.$border-radius-xs};
   --hero-image-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Modifier
@@ -153,14 +153,13 @@
   }
 
   &__description-text {
-    margin-bottom: var(--hero-image-description-text-margin-bottom);
     @include abs.typography-hero-description;
   }
 
   &__description-image {
     width: var(--hero-image-description-image-width);
     height: var(--hero-image-description-image-height);
-    margin-bottom: var(--hero-image-description-image-margin-bottom);
+    margin-top: var(--hero-image-description-image-margin-top);
     border-radius: var(--hero-image-description-image-border-radius);
     box-shadow: var(--hero-image-description-image-box-shadow);
 
