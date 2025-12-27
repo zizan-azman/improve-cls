@@ -2,6 +2,9 @@
 @use "@/styles/base/index-base" as root;
 
 .app-layout {
+  --app-layout-content-padding: #{root.$spacing-md};
+  --app-layout-content-padding-desktop: #{root.$spacing-md root.$spacing-lg};
+
   display: flex;
   flex-direction: column;
 
@@ -12,10 +15,10 @@
 
   &__content {
     flex: 1;
-    padding: 24px 32px;
+    padding: var(--app-layout-content-padding);
 
     @include abs.breakpoint-up(lg) {
-      padding: 32px 60px;
+      padding: var(--app-layout-content-padding-desktop);
     }
   }
 }

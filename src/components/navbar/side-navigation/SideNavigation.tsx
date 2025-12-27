@@ -1,12 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from "./SideNavigation.module.scss";
-import {
-  getNavLinkClass,
-  getDrawerClass,
-  getGroupLinkClass,
-} from "./SideNavigation.utils";
 import type { SideNavigationProps } from "./SideNavigation.model";
+import { getModifierClass } from "@/utils/GetClass.utils";
 
 export function SideNavigation({ config }: SideNavigationProps) {
   const { hamburger, logo, groups } = config;
@@ -81,7 +77,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
         aria-hidden="true"
       />
       <aside
-        className={getDrawerClass(
+        className={getModifierClass(
           isOpen,
           styles["side-navigation__drawer"],
           styles["side-navigation__drawer--open"]
@@ -108,7 +104,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
               aria-label="Go to homepage"
               onClick={() => handleSoloGroupClick("home")}
               className={({ isActive }) =>
-                getNavLinkClass(
+                getModifierClass(
                   isActive,
                   styles["side-navigation__group-button-solo"],
                   styles["side-navigation__group-button-solo--active"]
@@ -138,7 +134,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
               <button
                 onClick={() => toggleGroup(group.id)}
                 aria-expanded={isGroupExpanded(group.id)}
-                className={getGroupLinkClass(
+                className={getModifierClass(
                   isGroupExpanded(group.id),
                   styles["side-navigation__group-button"],
                   styles["side-navigation__group-button--expand"]
@@ -167,7 +163,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
                 </svg>
               </button>
               <div
-                className={getGroupLinkClass(
+                className={getModifierClass(
                   isGroupExpanded(group.id),
                   styles["side-navigation__links-container"],
                   styles["side-navigation__links-container--expand"]
@@ -179,7 +175,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
                     to={link.path}
                     end
                     className={({ isActive }) =>
-                      getNavLinkClass(
+                      getModifierClass(
                         isActive,
                         styles["side-navigation__link"],
                         styles["side-navigation__link--active"]
@@ -199,7 +195,7 @@ export function SideNavigation({ config }: SideNavigationProps) {
               aria-label="Go to conclusion page"
               onClick={() => handleSoloGroupClick("conclusion")}
               className={({ isActive }) =>
-                getNavLinkClass(
+                getModifierClass(
                   isActive,
                   styles["side-navigation__group-button-solo"],
                   styles["side-navigation__group-button-solo--active"]
