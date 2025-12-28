@@ -16,7 +16,7 @@
   --hero-image-heading-margin-bottom: #{root.$spacing-lg};
   /* Teaser */
   --hero-image-teaser-gap: #{root.$spacing-md};
-  --hero-image-teaser-margin-bottom: #{root.$spacing-md};
+  --hero-image-teaser-margin-bottom: #{root.$spacing-lg};
   /* Paragraphs Container */
   --hero-image-paragraphs-container-margin-bottom: #{root.$spacing-md};
   /* Paragraph */
@@ -41,6 +41,7 @@
   --hero-image-description-image-desktop-width: 320px;
   --hero-image-description-image-height: auto;
   --hero-image-description-image-margin-top: #{root.$spacing-xs};
+  --hero-image-description-image-margin-bottom: #{root.$spacing-xs};
   --hero-image-description-image-border-radius: #{root.$border-radius-xs};
   --hero-image-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Modifier
@@ -160,6 +161,7 @@
     width: var(--hero-image-description-image-width);
     height: var(--hero-image-description-image-height);
     margin-top: var(--hero-image-description-image-margin-top);
+    margin-bottom: var(--hero-image-description-image-margin-bottom);
     border-radius: var(--hero-image-description-image-border-radius);
     box-shadow: var(--hero-image-description-image-box-shadow);
 

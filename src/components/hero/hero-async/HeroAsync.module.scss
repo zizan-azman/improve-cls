@@ -16,7 +16,7 @@
   --hero-async-heading-margin-bottom: #{root.$spacing-lg};
   /* Teaser */
   --hero-async-teaser-gap: #{root.$spacing-md};
-  --hero-async-teaser-margin-bottom: #{root.$spacing-md};
+  --hero-async-teaser-margin-bottom: #{root.$spacing-lg};
   /* Paragraphs Container */
   --hero-async-paragraphs-container-margin-bottom: #{root.$spacing-md};
   /* Paragraph */
@@ -41,6 +41,7 @@
   --hero-async-description-image-desktop-width: 320px;
   --hero-async-description-image-height: auto;
   --hero-async-description-image-margin-top: #{root.$spacing-xs};
+  --hero-async-description-image-margin-bottom: #{root.$spacing-xs};
   --hero-async-description-image-border-radius: #{root.$border-radius-xs};
   --hero-async-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Description Image Modifier
@@ -53,6 +54,7 @@
   --hero-async-description-video-desktop-width: 320px;
   --hero-async-description-video-height: auto;
   --hero-async-description-video-margin-top: #{root.$spacing-xs};
+  --hero-async-description-video-margin-bottom: #{root.$spacing-xs};
   --hero-async-description-video-border-radius: #{root.$border-radius-xs};
   --hero-async-description-video-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Description Video Modifier
@@ -133,9 +135,11 @@
   }
 
   &__description-image {
+    display: inline-block;
     width: var(--hero-async-description-image-width);
     height: var(--hero-async-description-image-height);
     margin-top: var(--hero-async-description-image-margin-top);
+    margin-bottom: var(--hero-async-description-image-margin-bottom);
     border-radius: var(--hero-async-description-image-border-radius);
     box-shadow: var(--hero-async-description-image-box-shadow);
 
@@ -158,6 +162,7 @@
     width: var(--hero-async-description-video-width);
     height: var(--hero-async-description-video-height);
     margin-top: var(--hero-async-description-video-margin-top);
+    margin-bottom: var(--hero-async-description-video-margin-bottom);
     border-radius: var(--hero-async-description-video-border-radius);
     box-shadow: var(--hero-async-description-video-box-shadow);
 

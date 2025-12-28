@@ -11,7 +11,8 @@
   --hero-conclusion-description-image-width: 100%;
   --hero-conclusion-description-image-desktop-width: 320px;
   --hero-conclusion-description-image-height: auto;
-  --hero-conclusion-description-image-margin-top: #{root.$spacing-md};
+  --hero-conclusion-description-image-margin-top: #{root.$spacing-xs};
+  --hero-conclusion-description-image-margin-bottom: #{root.$spacing-xs};
   --hero-conclusion-description-image-border-radius: #{root.$border-radius-xs};
   --hero-conclusion-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Description Image Modifier
@@ -23,7 +24,8 @@
   --hero-conclusion-description-video-width: 100%;
   --hero-conclusion-description-video-desktop-width: 320px;
   --hero-conclusion-description-video-height: auto;
-  --hero-conclusion-description-video-margin-top: #{root.$spacing-md};
+  --hero-conclusion-description-video-margin-top: #{root.$spacing-xs};
+  --hero-conclusion-description-video-margin-bottom: #{root.$spacing-xs};
   --hero-conclusion-description-video-border-radius: #{root.$border-radius-xs};
   --hero-conclusion-description-video-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Description Video Modifier
@@ -60,6 +62,7 @@
     width: var(--hero-conclusion-description-image-width);
     height: var(--hero-conclusion-description-image-height);
     margin-top: var(--hero-conclusion-description-image-margin-top);
+    margin-bottom: var(--hero-conclusion-description-image-margin-bottom);
     border-radius: var(--hero-conclusion-description-image-border-radius);
     box-shadow: var(--hero-conclusion-description-image-box-shadow);
 
@@ -82,6 +85,7 @@
     width: var(--hero-conclusion-description-video-width);
     height: var(--hero-conclusion-description-video-height);
     margin-top: var(--hero-conclusion-description-video-margin-top);
+    margin-bottom: var(--hero-conclusion-description-video-margin-bottom);
     border-radius: var(--hero-conclusion-description-video-border-radius);
     box-shadow: var(--hero-conclusion-description-video-box-shadow);
 

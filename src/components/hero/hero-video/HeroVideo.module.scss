@@ -16,7 +16,7 @@
   --hero-video-heading-margin-bottom: #{root.$spacing-lg};
   /* Teaser */
   --hero-video-teaser-gap: #{root.$spacing-md};
-  --hero-video-teaser-margin-bottom: #{root.$spacing-md};
+  --hero-video-teaser-margin-bottom: #{root.$spacing-lg};
   /* Paragraphs Container */
   --hero-video-paragraphs-container-margin-bottom: #{root.$spacing-md};
   /* Paragraph */
@@ -38,7 +38,8 @@
   --hero-video-description-image-width: 100%;
   --hero-video-description-image-desktop-width: 320px;
   --hero-video-description-image-height: auto;
-  --hero-video-description-image-margin-top: #{root.$spacing-xs};
+  --hero-video-description-image-margin-top: #{root.$spacing-sm};
+  --hero-video-description-image-margin-bottom: #{root.$spacing-xs};
   --hero-video-description-image-border-radius: #{root.$border-radius-xs};
   --hero-video-description-image-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   // Modifier
@@ -154,9 +155,11 @@
   }
 
   &__description-image {
+    display: inline-block;
     width: var(--hero-video-description-image-width);
     height: var(--hero-video-description-image-height);
     margin-top: var(--hero-video-description-image-margin-top);
+    margin-bottom: var(--hero-video-description-image-margin-bottom);
     border-radius: var(--hero-video-description-image-border-radius);
     box-shadow: var(--hero-video-description-image-box-shadow);
 
